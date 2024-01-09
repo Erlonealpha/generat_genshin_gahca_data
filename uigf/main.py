@@ -8,7 +8,7 @@ from typing import List, Dict, Set
 import pandas as pd
 
 from datetime import datetime, timedelta
-from random import randint
+import random
 
 # samplejson: dict = json.load(open('./samplejson.json', encoding='utf-8'))
 
@@ -141,6 +141,12 @@ df_gacha_weapon = pd.DataFrame(weapon_list)
 df_gacha_char_group = df_gacha_char.groupby('rank_type')
 df_gacha_weapon_group = df_gacha_weapon.groupby('rank_type')
 
+df_gacha_type_group = df_gacha.groupby('uigf_gacha_type')
+df_gacha_type_lst = []
+for name, group in df_gacha_type_group:
+    df_gacha_type_lst.append(group.to_dict('records'))
+
+
 char_type_list = []
 for name, group in df_gacha_char_group:
     print(name)
@@ -152,15 +158,37 @@ for name, group in df_gacha_weapon_group:
     weapon_type_list.append(group.to_dict('records'))
 
 
+limited_gacha_count_dic = {
+    '五星': 23,
+    '四星': 177,
+    '三星': 1138,
+    '四星武器': 52,
+    '四星角色': 125
+}
 
+limited_weapon_gacha_count_dic = {
+    '五星': 7,
+    '四星': 65,
+    '三星': 330,
+    '四星武器': 55,
+    '四星角色': 10
+}
 
-
-
+permanent_gacha_count_dic = {
+    '五星': 6,
+    '四星': 56,
+    '三星': 365,
+    '五星角色': 3,
+    '五星武器': 3,
+    '四星武器': 29,
+    '四星角色': 27
+}
 
 
 time_start, time_end = '2021-01-02 12:00:00', '2022-06-11 22:00:00'
 limited_char_time_interval = (time_start, time_end)
 limited_cur_char_dic = [
+    {'起始时间':   [0,  ['2020-11-28 18:00:00', '2020-12-22 00:00:00']]},
     {'琴':         [79, ['2020-12-23 18:00:30', '2021-01-12 00:00:00']]},  # 第一个五星
     {'魈':         [79, ['2021-02-03 18:00:30', '2021-02-23 00:00:00']]},  # 当时我居然为魈 -648, 好像还充了，忘了多少了
     {'莫娜':       [80, ['2021-03-16 18:00:30']]},                         # 有印象记得是什么时候出的时间区间为准确的一天 (这个我甚至记得是在什么时候出的, 没错就是在卡池刚开没多久)
@@ -184,71 +212,130 @@ limited_cur_char_dic = [
     {'雷电将军':   [72, ['2022-03-08 18:00:30', '2022-03-29 00:00:00']]},  # 卡池前中期
     {'刻晴':       [39, ['2022-03-30 18:00:30', '2022-04-19 00:00:00']]},  # 卡池前期  终结了9连没歪
     {'夜兰':       [80, ['2022-05-31 18:00:30', '2022-06-21 00:00:00']]},  # 应该是卡池末期
-    {'':           [17, ['2022-06-21 18:00:30', '2022-07-12 00:00:00']]}   # 这个是未出货抽数 #TODO 这里的数据和之后的数据合并可能会出现保底大于180的情况, 得特殊处理
+    {'已抽未出数':  [17, ['2022-06-21 18:00:30', '2022-07-12 00:00:00']]}   # 这个是未出货抽数 #TODO 这里的数据和之后的数据合并可能会出现保底大于180的情况, 得特殊处理
 ]                                                                        # 还有有半年的数据是丢失的(悲) 但是可以通过已经获取的角色猜测, 歪的是谁就不清楚了，但我只知道琴11命...
 
 time_start_, time_end_ = '2020-11-28 12:00:00', '2022-05-19 22:00:00'
 limited_weapon_time_interval = (time_start_, time_end_)
-weapon_cur_dic = {
-    '和璞鸢':       [35, ['2021-02-03 18:00:30', '2021-02-23 00:00:00']], # 当时充剩下的还抽了武器
-    '狼的末路':     [65, ['2021-03-16 19:30:30', '2021-03-16 19:30:30']], # 抽护摩歪了
-    '天空之刃':     [68, '2021'], # 好像是给可莉抽四风的时候歪的
-    '终末嗟叹之诗': [43, '2021'], # 
-    '护摩之杖':     [65, '2021'], # 第二次抽胡桃出的
-    '薙草之稻光':   [53, '2021'], # 雷神池末期
-    '天空之傲':     [71, '2021'], # 
-    '':             [2, '2021']
-}
+weapon_cur_dic = [
+    {'起始时间':     [0,  ['2020-11-28 18:00:00', '2021-02-02 00:00:00']]},
+    {'和璞鸢':       [35, ['2021-02-03 18:00:30', '2021-02-23 00:00:00']]}, # 当时充剩下的还抽了武器
+    {'狼的末路':     [65, ['2021-03-16 19:30:30', '2021-03-16 19:30:30']]}, # 抽护摩歪了
+    {'天空之刃':     [68, '2021']}, # 好像是给可莉抽四风的时候歪的
+    {'终末嗟叹之诗': [43, '2021']}, # 
+    {'护摩之杖':     [65, '2021']}, # 第二次抽胡桃出的
+    {'薙草之稻光':   [53, '2021']}, # 雷神池末期
+    {'天空之傲':     [71, '2021']}, # 
+    {'已抽未出数':    [2, '2021']}
+]
 
 time_start__, time_end__ = '2020-11-28 12:00:00', '2022-06-11 22:00:00'
 limited_permanent_time_interval = (time_start__, time_end__)
-permanent_cur_char_dic = {
-    '琴':       [79, '2021'], # 常驻第一个，忘了什么时候了
-    '天空之卷': [83, '2021'], # 这里的可以根据抽卡数大致推断时间
-    '七七':     [79, '2021'],
-    '风鹰剑':   [16, '2021'],
-    '天空之傲': [73, '2021'],
-    '':         [19, '2021']
-}
+permanent_cur_char_dic = [
+    {'起始时间':  [0, ['2020-11-28 18:00:00', '2020-12-22 00:00:00']]},
+    {'琴':        [79, '2021']}, # 常驻第一个，忘了什么时候了
+    {'天空之卷':  [83, '2021']}, # 这里的可以根据抽卡数大致推断时间
+    {'七七':      [79, '2021']},
+    {'风鹰剑':    [16, '2021']},
+    {'琴':        [78, '2021']},
+    {'天空之傲':  [73, '2021']},
+    {'已抽未出数': [19, '2021']}
+]
 
 
-
-
-def nomalize_data(data: List[dict], item_type: str) -> dict:
+def nomalize_data(
+        data: List[dict], 
+        item_type: str,
+        gacha_type: str
+    ) -> dict:
     """
     处理数据, 按照特定规则随机补全缺失数据
     :param data:
     :return:
     """
+    
+    if gacha_type == '100':
+        uigf_gacha_type = '100'
+    elif gacha_type == '200':
+        uigf_gacha_type = '200'
+    elif gacha_type == '301' or gacha_type == '400':
+        uigf_gacha_type = '301'
+    elif gacha_type == '302':
+        uigf_gacha_type = '302'
+    
     gacha_lst = []
     for dic in data:
+        k = list(dic.keys())[0]
         v = list(dic.values())[0]
-        if len(v[1])>1:
+        # 根据时间区间随机一个时间
+        if k == '起始时间' or k == '已抽未出数':
+            time = v[1]
+        elif len(v[1])>1:
             time = random_time(v[1][0], v[1][1])
         else:
             time = v[1][0]
         new_dic = {
-            'gacha_type': None,
+            'gacha_type': gacha_type,
             'time': time,
             'name': list(dic.keys())[0],
-            'item_name': None,
             'item_type': item_type,
-            'rank_type': None,
+            'rank_type': '5',
             'id': None,
-            'uigf_gacha_type': None 
+            'uigf_gacha_type': uigf_gacha_type,
+            'fill_len': v[0]
         }
         gacha_lst.append(new_dic)
     return gacha_lst
     
     
-
+def load_tmp_data(path):
+    with open(path, 'r', encoding='utf-8')as f:
+        lst = []
+        lines = f.readlines()
+        i = 0
+        while i < len(lines):
+            j = 0
+            line_cont_1 = lines[i].split('\t')
+            line_cont_2 = lines[i+1].split('\t')
+            line_cont_3 = lines[i+2].split('\t')
+            if line_cont_1[4] == '祈愿' or line_cont_1[4] == '限定祈愿':
+                pass
+            else:
+                i+=3
+                continue
+            if line_cont_1[3] == '5星.png':
+                rank_type = 5
+            elif line_cont_1[3] == '4星.png':
+                rank_type = 4
+            elif line_cont_1[3] == '3星.png':
+                rank_type = 3
+                print('error')
+            dic = {
+                'name': line_cont_1[1],
+                'type': line_cont_1[2],
+                'rank_type': rank_type
+            }
+            lst.append(dic)
+            i += 3
+        contents = []
+        for i, line in enumerate(lines):
+            if line.startswith('['):
+                section_name = line.strip('[]\n')
+                contents.append({
+                    'section': section_name,
+                    'index': i+1
+                })
+    return lst
+        
+            
+        
 
 def random_time(start_date, end_date):
     start = datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S')
     end = datetime.strptime(end_date, '%Y-%m-%d %H:%M:%S')
     time_between_dates = end - start
 
-    random_second = randint(0, time_between_dates.total_seconds())
+    random_second = random.randint(0, time_between_dates.total_seconds())
     random_date = start + timedelta(seconds=random_second)
 
     random_date_str = random_date.strftime('%Y-%m-%d %H:%M:%S')
@@ -256,10 +343,68 @@ def random_time(start_date, end_date):
 
 
 
-def fill_data_to_uigf() -> dict:
+def convert_time_to_seconds(time_str):
+    h, m, s = map(int, time_str.split(':'))
+    return h * 3600 + m * 60 + s
 
-    ...
-    
-lst = nomalize_data(limited_cur_char_dic, '角色')
+def random_time_within_day_bounds(date, min_time, max_time):
+    min_seconds = convert_time_to_seconds(min_time)
+    max_seconds = convert_time_to_seconds(max_time)
+    random_seconds = random.randint(min_seconds, max_seconds)
+    return (datetime.combine(date, datetime.min.time()) + timedelta(seconds=random_seconds)).strftime('%Y-%m-%d %H:%M:%S')
 
+def random_time_(start_date, end_date, min_time, max_time):
+    start = datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S').date()
+    end = datetime.strptime(end_date, '%Y-%m-%d %H:%M:%S').date()
+    random_date = start + timedelta(days=random.randint(0, (end - start).days))
+    return random_time_within_day_bounds(random_date, min_time, max_time)
+
+def generate_random_times(start_date, end_date, count, min_time='08:30:00', max_time='23:00:00'):
+    start = datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S').date()
+    end = datetime.strptime(end_date, '%Y-%m-%d %H:%M:%S').date()
+    random_dates = [start + timedelta(days=random.randint(0, (end - start).days)) for _ in range(count)]
+    random_times = [random_time_within_day_bounds(date, min_time, max_time) for date in random_dates]
+
+    return sorted(random_times)
+
+
+def fill_data_to_uigf(lst: List[dict]) -> dict:
+    i = 0
+    gacha_lst = []
+    while i < len(lst)-1:
+        dic = lst[i]
+        if dic['name'] == '起始时间':
+            starttime = dic['time'][0]
+            starttime_front = starttime
+            i += 1
+            continue
+        elif dic['name'] == '已抽未出数':
+            starttime = starttime_front
+            endtime = dic['time'][1]
+        else:
+            starttime = starttime_front
+            fill_len = dic['fill_len']
+            endtime = dic['time']
+            starttime_front = endtime
+        random_times = generate_random_times(starttime, endtime, fill_len-1)
+        for time in random_times:
+            new_dic = {
+                'gacha_type': dic['gacha_type'],
+                'time': time,
+                'name': None,
+                'item_type': None,
+                'rank_type': None,
+                'id': None,
+                'uigf_gacha_type': dic['uigf_gacha_type'],
+            }
+            gacha_lst.append(new_dic)
+        i += 1
+    return gacha_lst
+
+
+lst = nomalize_data(limited_cur_char_dic, '角色', '302')
+gacha_rank34_lst = fill_data_to_uigf(lst)
+
+tmp_data = load_tmp_data(join_(path_b, 'tmp\\tmp_data.txt'))
 print()
+
