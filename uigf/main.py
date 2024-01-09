@@ -353,6 +353,7 @@ def load_tmp_data(path):
                     continue
                 if cur_content[3] == '5星.png':
                     rank_type = 5
+                    continue
                 elif cur_content[3] == '4星.png':
                     rank_type = 4
                 elif cur_content[3] == '3星.png':
@@ -360,12 +361,13 @@ def load_tmp_data(path):
                 dic = {
                     'name': cur_content[1],
                     'type': cur_content[2],
-                    'rank_type': 5
+                    'rank_type': rank_type
                 }
                 lst.append(dic)
-            lst_vall.append({
-                "version": content['name'],
-                "context": lst})
+            if lst:
+                lst_vall.append({
+                    "version": content['name'],
+                    "context": lst})
     return lst
         
             
