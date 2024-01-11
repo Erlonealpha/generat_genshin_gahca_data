@@ -154,8 +154,31 @@ weapon_group_dic_lst = group_to_dic_lst(weapon_group_dic_lst_, dic_b=True)
 earlier_char_lst = ['砂糖','芭芭拉','莱依拉','菲谢尔','行秋','诺艾尔','辛焱','迪奥娜','重云','雷泽','香菱']
 # 御三家
 char_lst = ['凯亚', '丽萨', '安伯']
+earlier_weapon_lst = ['匣里灭辰','匣里龙吟','弓藏','昭心','流浪乐章','祭礼剑',
+                      '祭礼大剑','祭礼弓','祭礼残章','笛剑','绝弦','西风剑',
+                      '西风大剑','西风猎弓','西风秘典','西风长枪','钟剑','雨裁']
 for char_group_dic in char_group_dic_lst:
     if char_group_dic['name'] in earlier_char_lst:
         char_group_dic['earliest_time'] = '2020/09/15 10:00:00'
-print(df_char_data.head())
+for weapon_group_dic in weapon_group_dic_lst:
+    if weapon_group_dic['name'] in earlier_weapon_lst:
+        weapon_group_dic['earliest_time'] = '2020/09/15 10:00:00'
+        weapon_group_dic['rank_type'] = 4
+# 写入三星武器
+with open(join_(path_b, 'data_json\\weapon_data_with_version.json'), 'r', encoding='utf-8') as j:
+    weapon_data_with_version = json.load(j)
+match_data = [context for context in weapon_data_with_version[0]['context'] if context['rank_type']==3]
+for match_ in match_data:
+    weapon_group_dic_lst.append({'name': match_['name'], 
+                                 'data': None, 
+                                 'earliest_time': '2020/09/15 10:00:00',
+                                 'rank_type': 3})
+
+with open(join_(path_b, 'data_json\\char_data.json'), 'w', encoding='utf-8') as r, \
+     open(join_(path_b, 'data_json\\weapon_data.json'), 'w', encoding='utf-8') as s:
+    json.dump(char_group_dic_lst, r, ensure_ascii=False, indent=4)
+    json.dump(weapon_group_dic_lst, s, ensure_ascii=False, indent=4)
+
+print()
+
 

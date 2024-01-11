@@ -286,89 +286,6 @@ def nomalize_data(
         }
         gacha_lst.append(new_dic)
     return gacha_lst
-    
-    
-def load_tmp_data(path):
-    with open(path, 'r', encoding='utf-8')as f:
-        
-        lines = f.readlines()
-        # i = 0
-        # while i < len(lines):
-        #     j = 0
-        #     line_cont_1 = lines[i].split('\t')
-        #     line_cont_2 = lines[i+1].split('\t')
-        #     line_cont_3 = lines[i+2].split('\t')
-        #     if line_cont_1[4] == '祈愿' or line_cont_1[4] == '限定祈愿':
-        #         pass
-        #     else:
-        #         i+=3
-        #         continue
-        #     if line_cont_1[3] == '5星.png':
-        #         rank_type = 5
-        #     elif line_cont_1[3] == '4星.png':
-        #         rank_type = 4
-        #     elif line_cont_1[3] == '3星.png':
-        #         rank_type = 3
-        #         print('error')
-        #     dic = {
-        #         'name': line_cont_1[1],
-        #         'type': line_cont_1[2],
-        #         'rank_type': rank_type
-        #     }
-        #     lst.append(dic)
-        #     i += 3
-        contents = []
-        first = True
-        for i, line in enumerate(lines):
-            if line.startswith('['):
-                section_name = line.strip('[]\n')
-                contents.append({
-                    'section': section_name,
-                    'indexL': i+1,
-                    'indexR': None
-                })
-                if not first:
-                    if contents[len(contents)-2]['indexL'] >= i-1:
-                        contents[len(contents)-2]['indexR'] = contents[len(contents)-2]['indexL']
-                    else:
-                        contents[len(contents)-2]['indexR'] = i-1
-                    
-                first = False
-            if i == len(lines)-1:
-                contents[len(contents)-1]['indexR'] = i
-        content_lst = []
-        for content in contents:
-            if not content['indexL'] == content['indexR']:
-                content_lst.append({'name': content['section'],
-                                    'context':lines[content['indexL']:content['indexR']], 
-                                    })
-        lst_vall = []
-        for content in content_lst:
-            lst = []
-            cur_contents = [line.split('\t') for line in content['context'] if line.split('\t')[0].endswith('.png')]
-            for cur_content in cur_contents:
-                if cur_content[4] == '祈愿' or cur_content[4] == '限定祈愿':
-                    pass
-                else:
-                    continue
-                if cur_content[3] == '5星.png':
-                    rank_type = 5
-                    continue
-                elif cur_content[3] == '4星.png':
-                    rank_type = 4
-                elif cur_content[3] == '3星.png':
-                    rank_type = 3
-                dic = {
-                    'name': cur_content[1],
-                    'type': cur_content[2],
-                    'rank_type': rank_type
-                }
-                lst.append(dic)
-            if lst:
-                lst_vall.append({
-                    "version": content['name'],
-                    "context": lst})
-    return lst_vall
 
 def random_time(start_date, end_date):
     start = datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S')
@@ -441,10 +358,25 @@ def fill_data_to_uigf(lst: List[dict]) -> dict:
         i += 1
     return gacha_lst
 
-
+# 按照时间区间随机每个物品的抽卡时间
 lst = nomalize_data(limited_cur_char_dic, '角色', '302')
+# 填充为uigf格式，等待填充具体类型的数据
 gacha_rank34_lst = fill_data_to_uigf(lst)
 
-tmp_data = load_tmp_data(join_(path_b, 'tmp\\tmp_data.txt'))
+#===============================================================
+# *随机物品逻辑部分：
+# 按照数量随机生成4星物品填充，随机的物品按照当期的up概率填充具体物品
+# 3星同理，但只需要全部随机即可
+# 
+# *流程：
+# 1. 随机4星的位置
+# 2. 4星具体物品根据概率填充
+# 3. 随机3星的位置
+# 4. 3星具体物品全局随机填充
+#
+# *一些细节：
+# 4星物品的具体选择包含：常驻(御三家)或up(按照当期的4星up)
+#===============================================================
+
 print()
 

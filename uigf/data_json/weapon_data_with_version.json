@@ -1,0 +1,252 @@
+[
+    {
+        "version": "v1.0",
+        "context": [
+            {
+                "name": "笛剑",
+                "type": "单手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "祭礼剑",
+                "type": "单手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "匣里龙吟",
+                "type": "单手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "西风猎弓",
+                "type": "弓",
+                "rank_type": 4
+            },
+            {
+                "name": "西风剑",
+                "type": "单手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "钟剑",
+                "type": "双手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "雨裁",
+                "type": "双手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "祭礼大剑",
+                "type": "双手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "西风大剑",
+                "type": "双手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "祭礼弓",
+                "type": "弓",
+                "rank_type": 4
+            },
+            {
+                "name": "绝弦",
+                "type": "弓",
+                "rank_type": 4
+            },
+            {
+                "name": "弓藏",
+                "type": "弓",
+                "rank_type": 4
+            },
+            {
+                "name": "西风秘典",
+                "type": "法器",
+                "rank_type": 4
+            },
+            {
+                "name": "祭礼残章",
+                "type": "法器",
+                "rank_type": 4
+            },
+            {
+                "name": "昭心",
+                "type": "法器",
+                "rank_type": 4
+            },
+            {
+                "name": "流浪乐章",
+                "type": "法器",
+                "rank_type": 4
+            },
+            {
+                "name": "西风长枪",
+                "type": "长柄武器",
+                "rank_type": 4
+            },
+            {
+                "name": "匣里灭辰",
+                "type": "长柄武器",
+                "rank_type": 4
+            },
+            {
+                "name": "冷刃",
+                "type": "单手剑",
+                "rank_type": 3
+            },
+            {
+                "name": "以理服人",
+                "type": "双手剑",
+                "rank_type": 3
+            },
+            {
+                "name": "沐浴龙血的剑",
+                "type": "双手剑",
+                "rank_type": 3
+            },
+            {
+                "name": "神射手之誓",
+                "type": "弓",
+                "rank_type": 3
+            },
+            {
+                "name": "鸦羽弓",
+                "type": "弓",
+                "rank_type": 3
+            },
+            {
+                "name": "弹弓",
+                "type": "弓",
+                "rank_type": 3
+            },
+            {
+                "name": "魔导绪论",
+                "type": "法器",
+                "rank_type": 3
+            },
+            {
+                "name": "讨龙英杰谭",
+                "type": "法器",
+                "rank_type": 3
+            },
+            {
+                "name": "翡玉法球",
+                "type": "法器",
+                "rank_type": 3
+            }
+        ]
+    },
+    {
+        "version": "v1.3",
+        "context": [
+            {
+                "name": "千岩古剑",
+                "type": "双手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "千岩长枪",
+                "type": "长柄武器",
+                "rank_type": 4
+            }
+        ]
+    },
+    {
+        "version": "v1.4",
+        "context": [
+            {
+                "name": "暗巷的酒与诗",
+                "type": "法器",
+                "rank_type": 4
+            },
+            {
+                "name": "暗巷猎手",
+                "type": "弓",
+                "rank_type": 4
+            },
+            {
+                "name": "暗巷闪光",
+                "type": "单手剑",
+                "rank_type": 4
+            }
+        ]
+    },
+    {
+        "version": "v1.6",
+        "context": [
+            {
+                "name": "幽夜华尔兹",
+                "type": "弓",
+                "rank_type": 4
+            }
+        ]
+    },
+    {
+        "version": "v2.2",
+        "context": [
+            {
+                "name": "恶王丸",
+                "type": "双手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "曚云之月",
+                "type": "弓",
+                "rank_type": 4
+            },
+            {
+                "name": "断浪长鳍",
+                "type": "长柄武器",
+                "rank_type": 4
+            }
+        ]
+    },
+    {
+        "version": "v3.1",
+        "context": [
+            {
+                "name": "流浪的晚星",
+                "type": "法器",
+                "rank_type": 4
+            },
+            {
+                "name": "玛海菈的水色",
+                "type": "双手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "西福斯的月光",
+                "type": "单手剑",
+                "rank_type": 4
+            }
+        ]
+    },
+    {
+        "version": "v4.1",
+        "context": [
+            {
+                "name": "船坞长剑",
+                "type": "单手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "便携动力锯",
+                "type": "双手剑",
+                "rank_type": 4
+            },
+            {
+                "name": "测距规",
+                "type": "弓",
+                "rank_type": 4
+            },
+            {
+                "name": "勘探钻机",
+                "type": "长柄武器",
+                "rank_type": 4
+            }
+        ]
+    }
+]

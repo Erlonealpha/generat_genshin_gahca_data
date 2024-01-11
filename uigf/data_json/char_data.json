@@ -1,0 +1,4256 @@
+[
+    {
+        "name": "久岐忍",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/11/28 18:00:00",
+                    "endtime": "2023/12/19 14:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "香菱",
+                    "久岐忍",
+                    "绮良良"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "绮良良"
+            },
+            {
+                "time": {
+                    "starttime": "2023/11/28 18:00:00",
+                    "endtime": "2023/12/19 14:59:59"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "香菱",
+                    "久岐忍",
+                    "绮良良"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "绮良良"
+            },
+            {
+                "time": {
+                    "starttime": "2023/04/11 15:00:00",
+                    "endtime": "2023/05/02 17:59:59"
+                },
+                "five_rank": "纳西妲",
+                "four_rank": [
+                    "久岐忍",
+                    "多莉",
+                    "莱依拉"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "多莉",
+                "four_rank_3": "莱依拉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/04/11 15:00:00",
+                    "endtime": "2023/05/02 17:59:59"
+                },
+                "five_rank": "妮露",
+                "four_rank": [
+                    "久岐忍",
+                    "多莉",
+                    "莱依拉"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "多莉",
+                "four_rank_3": "莱依拉"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/27 15:00:00",
+                    "endtime": "2022/10/14 17:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "坎蒂丝",
+                    "久岐忍",
+                    "早柚"
+                ],
+                "four_rank_1": "坎蒂丝",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/27 15:00:00",
+                    "endtime": "2022/10/14 17:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "坎蒂丝",
+                    "久岐忍",
+                    "早柚"
+                ],
+                "four_rank_1": "坎蒂丝",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2022/6/21 18:00:00",
+                    "endtime": "2022/7/12 14:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "久岐忍",
+                    "重云",
+                    "五郎"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "重云",
+                "four_rank_3": "五郎"
+            }
+        ],
+        "earliest_time": "2022/09/27 15:00:00"
+    },
+    {
+        "name": "九条裟罗",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2022/12/27 18:00:00",
+                    "endtime": "2023/01/17 14:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "早柚",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "早柚",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/27 18:00:00",
+                    "endtime": "2023/01/17 14:59:59"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "早柚",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "早柚",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/08 18:00:00",
+                    "endtime": "2022/03/29 14:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/08 18:00:00",
+                    "endtime": "2022/03/29 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2021/08/31 15:00:00",
+                    "endtime": "2021/09/21 17:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "九条裟罗",
+                    "香菱",
+                    "砂糖"
+                ],
+                "four_rank_1": "九条裟罗",
+                "four_rank_2": "香菱",
+                "four_rank_3": "砂糖"
+            }
+        ],
+        "earliest_time": "2021/08/31 15:00:00"
+    },
+    {
+        "name": "云堇",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/05/23 15:00:00",
+                    "endtime": "2023/06/13 17:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "绮良良",
+                    "云堇",
+                    "重云"
+                ],
+                "four_rank_1": "绮良良",
+                "four_rank_2": "云堇",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/23 15:00:00",
+                    "endtime": "2023/06/13 17:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "绮良良",
+                    "云堇",
+                    "重云"
+                ],
+                "four_rank_1": "绮良良",
+                "four_rank_2": "云堇",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2023/01/17 15:00:00",
+                    "endtime": "2023/02/07 17:59:59"
+                },
+                "five_rank": "艾尔海森",
+                "four_rank": [
+                    "瑶瑶",
+                    "云堇",
+                    "辛焱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "云堇",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/01/17 15:00:00",
+                    "endtime": "2023/02/07 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "瑶瑶",
+                    "云堇",
+                    "辛焱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "云堇",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/02 18:00:00",
+                    "endtime": "2022/08/23 14:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "云堇"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/29 15:00:00",
+                    "endtime": "2022/04/19 18:00:00"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "砂糖",
+                    "香菱",
+                    "云堇"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "香菱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/29 15:00:00",
+                    "endtime": "2022/04/19 18:00:00"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "砂糖",
+                    "香菱",
+                    "云堇"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "香菱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/04 15:00:00",
+                    "endtime": "2022/01/25 17:59:59"
+                },
+                "five_rank": "申鹤",
+                "four_rank": [
+                    "云堇",
+                    "凝光",
+                    "重云"
+                ],
+                "four_rank_1": "云堇",
+                "four_rank_2": "凝光",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/04 15:00:00",
+                    "endtime": "2022/01/25 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "云堇",
+                    "凝光",
+                    "重云"
+                ],
+                "four_rank_1": "云堇",
+                "four_rank_2": "凝光",
+                "four_rank_3": "重云"
+            }
+        ],
+        "earliest_time": "2022/01/04 15:00:00"
+    },
+    {
+        "name": "五郎",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2022/12/06 15:00:00",
+                    "endtime": "2022/12/27 17:59:59"
+                },
+                "five_rank": "流浪者",
+                "four_rank": [
+                    "珐露珊",
+                    "五郎",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "五郎",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/06 15:00:00",
+                    "endtime": "2022/12/27 17:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "珐露珊",
+                    "五郎",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "五郎",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/6/21 18:00:00",
+                    "endtime": "2022/7/12 14:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "久岐忍",
+                    "重云",
+                    "五郎"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "重云",
+                "four_rank_3": "五郎"
+            },
+            {
+                "time": {
+                    "starttime": "2021/12/14 18:00:00",
+                    "endtime": "2022/01/04 14:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "五郎",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "五郎",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            }
+        ],
+        "earliest_time": "2021/12/14 18:00:00"
+    },
+    {
+        "name": "凝光",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/02/07 18:00:00",
+                    "endtime": "2023/02/28 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/07 18:00:00",
+                    "endtime": "2023/02/28 14:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            },
+            {
+                "time": {
+                    "starttime": "2022/07/12 15:00:00",
+                    "endtime": "2022/08/02 17:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "鹿野院平藏",
+                    "凝光",
+                    "托马"
+                ],
+                "four_rank_1": "鹿野院平藏",
+                "four_rank_2": "凝光",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2022/07/12 15:00:00",
+                    "endtime": "2022/08/02 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "鹿野院平藏",
+                    "凝光",
+                    "托马"
+                ],
+                "four_rank_1": "鹿野院平藏",
+                "four_rank_2": "凝光",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/04 15:00:00",
+                    "endtime": "2022/01/25 17:59:59"
+                },
+                "five_rank": "申鹤",
+                "four_rank": [
+                    "云堇",
+                    "凝光",
+                    "重云"
+                ],
+                "four_rank_1": "云堇",
+                "four_rank_2": "凝光",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/04 15:00:00",
+                    "endtime": "2022/01/25 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "云堇",
+                    "凝光",
+                    "重云"
+                ],
+                "four_rank_1": "云堇",
+                "four_rank_2": "凝光",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2021/10/12 15:00:00",
+                    "endtime": "2021/11/02 17:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "凝光",
+                    "重云",
+                    "烟绯"
+                ],
+                "four_rank_1": "凝光",
+                "four_rank_2": "重云",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/07/20 15:00:00",
+                    "endtime": "2021/08/10 17:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "凝光",
+                    "重云",
+                    "烟绯"
+                ],
+                "four_rank_1": "凝光",
+                "four_rank_2": "重云",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/02/17 18:00:00",
+                    "endtime": "2021/03/02 15:59:59"
+                },
+                "five_rank": "刻晴",
+                "four_rank": [
+                    "班尼特",
+                    "凝光",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "凝光",
+                "four_rank_3": "芭芭拉"
+            },
+            {
+                "time": {
+                    "starttime": "2020/11/10 15:00:00",
+                    "endtime": "2020/12/01 15:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "迪奥娜",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "迪奥娜",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            }
+        ],
+        "earliest_time": "2020/11/10 15:00:00"
+    },
+    {
+        "name": "北斗",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/11/07 15:00:00",
+                    "endtime": "2023/11/28 17:59:59"
+                },
+                "five_rank": "芙宁娜",
+                "four_rank": [
+                    "夏洛蒂",
+                    "柯莱",
+                    "北斗"
+                ],
+                "four_rank_1": "夏洛蒂",
+                "four_rank_2": "柯莱",
+                "four_rank_3": "北斗"
+            },
+            {
+                "time": {
+                    "starttime": "2023/11/07 15:00:00",
+                    "endtime": "2023/11/28 17:59:59"
+                },
+                "five_rank": "白术",
+                "four_rank": [
+                    "夏洛蒂",
+                    "柯莱",
+                    "北斗"
+                ],
+                "four_rank_1": "夏洛蒂",
+                "four_rank_2": "柯莱",
+                "four_rank_3": "北斗"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/07 18:00:00",
+                    "endtime": "2023/02/28 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/07 18:00:00",
+                    "endtime": "2023/02/28 14:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            },
+            {
+                "time": {
+                    "starttime": "2022/10/14 18:00:00",
+                    "endtime": "2022/11/01 14:59:59"
+                },
+                "five_rank": "妮露",
+                "four_rank": [
+                    "北斗",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "北斗",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/10/14 18:00:00",
+                    "endtime": "2022/11/01 14:59:59"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "北斗",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "北斗",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/25 18:00:00",
+                    "endtime": "2022/02/15 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "烟绯"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/25 18:00:00",
+                    "endtime": "2022/02/15 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "烟绯"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/09/21 18:00:00",
+                    "endtime": "2021/10/12 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "北斗",
+                    "行秋"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "北斗",
+                "four_rank_3": "行秋"
+            },
+            {
+                "time": {
+                    "starttime": "2021/05/18 18:00:00",
+                    "endtime": "2021/06/08 14:59:59"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "辛焱",
+                    "行秋",
+                    "北斗"
+                ],
+                "four_rank_1": "辛焱",
+                "four_rank_2": "行秋",
+                "four_rank_3": "北斗"
+            },
+            {
+                "time": {
+                    "starttime": "2021/02/02 15:00:00",
+                    "endtime": "2021/02/17 15:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "迪奥娜",
+                    "北斗",
+                    "辛焱"
+                ],
+                "four_rank_1": "迪奥娜",
+                "four_rank_2": "北斗",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2020/11/10 15:00:00",
+                    "endtime": "2020/12/01 15:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "迪奥娜",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "迪奥娜",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            }
+        ],
+        "earliest_time": "2020/11/10 15:00:00"
+    },
+    {
+        "name": "卡维",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/05/02 18:00:00",
+                    "endtime": "2023/05/23 14:59:59"
+                },
+                "five_rank": "白术",
+                "four_rank": [
+                    "卡维",
+                    "坎蒂丝",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "卡维",
+                "four_rank_2": "坎蒂丝",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/02 18:00:00",
+                    "endtime": "2023/05/23 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "卡维",
+                    "坎蒂丝",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "卡维",
+                "four_rank_2": "坎蒂丝",
+                "four_rank_3": "菲谢尔"
+            }
+        ],
+        "earliest_time": "2023/05/02 18:00:00"
+    },
+    {
+        "name": "坎蒂丝",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/12/19 15:00:00",
+                    "endtime": "2024/01/09 17:59:59"
+                },
+                "five_rank": "娜维娅",
+                "four_rank": [
+                    "砂糖",
+                    "罗莎莉亚",
+                    "坎蒂丝"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "坎蒂丝"
+            },
+            {
+                "time": {
+                    "starttime": "2023/12/19 15:00:00",
+                    "endtime": "2024/01/09 17:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "砂糖",
+                    "罗莎莉亚",
+                    "坎蒂丝"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "坎蒂丝"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/02 18:00:00",
+                    "endtime": "2023/05/23 14:59:59"
+                },
+                "five_rank": "白术",
+                "four_rank": [
+                    "卡维",
+                    "坎蒂丝",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "卡维",
+                "four_rank_2": "坎蒂丝",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/02 18:00:00",
+                    "endtime": "2023/05/23 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "卡维",
+                    "坎蒂丝",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "卡维",
+                "four_rank_2": "坎蒂丝",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/27 15:00:00",
+                    "endtime": "2022/10/14 17:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "坎蒂丝",
+                    "久岐忍",
+                    "早柚"
+                ],
+                "four_rank_1": "坎蒂丝",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/27 15:00:00",
+                    "endtime": "2022/10/14 17:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "坎蒂丝",
+                    "久岐忍",
+                    "早柚"
+                ],
+                "four_rank_1": "坎蒂丝",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "早柚"
+            }
+        ],
+        "earliest_time": "2022/09/27 15:00:00"
+    },
+    {
+        "name": "夏洛蒂",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/11/07 15:00:00",
+                    "endtime": "2023/11/28 17:59:59"
+                },
+                "five_rank": "芙宁娜",
+                "four_rank": [
+                    "夏洛蒂",
+                    "柯莱",
+                    "北斗"
+                ],
+                "four_rank_1": "夏洛蒂",
+                "four_rank_2": "柯莱",
+                "four_rank_3": "北斗"
+            },
+            {
+                "time": {
+                    "starttime": "2023/11/07 15:00:00",
+                    "endtime": "2023/11/28 17:59:59"
+                },
+                "five_rank": "白术",
+                "four_rank": [
+                    "夏洛蒂",
+                    "柯莱",
+                    "北斗"
+                ],
+                "four_rank_1": "夏洛蒂",
+                "four_rank_2": "柯莱",
+                "four_rank_3": "北斗"
+            }
+        ],
+        "earliest_time": "2023/11/07 15:00:00"
+    },
+    {
+        "name": "多莉",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/10/17 18:00:00",
+                    "endtime": "2023/11/07 14:59:59"
+                },
+                "five_rank": "莱欧斯利",
+                "four_rank": [
+                    "重云",
+                    "托马",
+                    "多莉"
+                ],
+                "four_rank_1": "重云",
+                "four_rank_2": "托马",
+                "four_rank_3": "多莉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/10/17 18:00:00",
+                    "endtime": "2023/11/07 14:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "重云",
+                    "托马",
+                    "多莉"
+                ],
+                "four_rank_1": "重云",
+                "four_rank_2": "托马",
+                "four_rank_3": "多莉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/04/11 15:00:00",
+                    "endtime": "2023/05/02 17:59:59"
+                },
+                "five_rank": "纳西妲",
+                "four_rank": [
+                    "久岐忍",
+                    "多莉",
+                    "莱依拉"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "多莉",
+                "four_rank_3": "莱依拉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/04/11 15:00:00",
+                    "endtime": "2023/05/02 17:59:59"
+                },
+                "five_rank": "妮露",
+                "four_rank": [
+                    "久岐忍",
+                    "多莉",
+                    "莱依拉"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "多莉",
+                "four_rank_3": "莱依拉"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/09 18:00:00",
+                    "endtime": "2022/09/27 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "多莉",
+                    "砂糖",
+                    "行秋"
+                ],
+                "four_rank_1": "多莉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "行秋"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/09 18:00:00",
+                    "endtime": "2022/09/27 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "多莉",
+                    "砂糖",
+                    "行秋"
+                ],
+                "four_rank_1": "多莉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "行秋"
+            }
+        ],
+        "earliest_time": "2022/09/09 18:00:00"
+    },
+    {
+        "name": "托马",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/10/17 18:00:00",
+                    "endtime": "2023/11/07 14:59:59"
+                },
+                "five_rank": "莱欧斯利",
+                "four_rank": [
+                    "重云",
+                    "托马",
+                    "多莉"
+                ],
+                "four_rank_1": "重云",
+                "four_rank_2": "托马",
+                "four_rank_3": "多莉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/10/17 18:00:00",
+                    "endtime": "2023/11/07 14:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "重云",
+                    "托马",
+                    "多莉"
+                ],
+                "four_rank_1": "重云",
+                "four_rank_2": "托马",
+                "four_rank_3": "多莉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/07/04 15:00:00",
+                    "endtime": "2023/07/25 17:59:59"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "米卡",
+                    "雷泽",
+                    "托马"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2023/07/04 15:00:00",
+                    "endtime": "2023/07/25 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "米卡",
+                    "雷泽",
+                    "托马"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/18 18:00:00",
+                    "endtime": "2022/12/06 14:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "莱依拉",
+                    "托马",
+                    "鹿野院平藏"
+                ],
+                "four_rank_1": "莱依拉",
+                "four_rank_2": "托马",
+                "four_rank_3": "鹿野院平藏"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/18 18:00:00",
+                    "endtime": "2022/12/06 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "莱依拉",
+                    "托马",
+                    "鹿野院平藏"
+                ],
+                "four_rank_1": "莱依拉",
+                "four_rank_2": "托马",
+                "four_rank_3": "鹿野院平藏"
+            },
+            {
+                "time": {
+                    "starttime": "2022/07/12 15:00:00",
+                    "endtime": "2022/08/02 17:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "鹿野院平藏",
+                    "凝光",
+                    "托马"
+                ],
+                "four_rank_1": "鹿野院平藏",
+                "four_rank_2": "凝光",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2022/07/12 15:00:00",
+                    "endtime": "2022/08/02 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "鹿野院平藏",
+                    "凝光",
+                    "托马"
+                ],
+                "four_rank_1": "鹿野院平藏",
+                "four_rank_2": "凝光",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2022/02/15 15:00:00",
+                    "endtime": "2022/03/08 17:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "托马",
+                    "菲谢尔",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "托马",
+                "four_rank_2": "菲谢尔",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/02 18:00:00",
+                    "endtime": "2021/11/23 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "托马",
+                    "迪奥娜",
+                    "早柚"
+                ],
+                "four_rank_1": "托马",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "早柚"
+            }
+        ],
+        "earliest_time": "2021/11/02 18:00:00"
+    },
+    {
+        "name": "早柚",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/09/05 18:00:00",
+                    "endtime": "2023/09/26 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "菲米尼",
+                    "早柚",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "菲米尼",
+                "four_rank_2": "早柚",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2023/09/05 18:00:00",
+                    "endtime": "2023/09/26 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "菲米尼",
+                    "早柚",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "菲米尼",
+                "four_rank_2": "早柚",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/27 18:00:00",
+                    "endtime": "2023/01/17 14:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "早柚",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "早柚",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/27 18:00:00",
+                    "endtime": "2023/01/17 14:59:59"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "早柚",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "早柚",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/27 15:00:00",
+                    "endtime": "2022/10/14 17:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "坎蒂丝",
+                    "久岐忍",
+                    "早柚"
+                ],
+                "four_rank_1": "坎蒂丝",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/27 15:00:00",
+                    "endtime": "2022/10/14 17:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "坎蒂丝",
+                    "久岐忍",
+                    "早柚"
+                ],
+                "four_rank_1": "坎蒂丝",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2022/04/19 18:00:00",
+                    "endtime": "2022/05/31 05:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "雷泽",
+                    "罗莎莉亚",
+                    "早柚"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/02 18:00:00",
+                    "endtime": "2021/11/23 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "托马",
+                    "迪奥娜",
+                    "早柚"
+                ],
+                "four_rank_1": "托马",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/08/10 18:00:00",
+                    "endtime": "2021/08/31 14:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "早柚",
+                    "迪奥娜",
+                    "辛焱"
+                ],
+                "four_rank_1": "早柚",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "辛焱"
+            }
+        ],
+        "earliest_time": "2021/08/10 18:00:00"
+    },
+    {
+        "name": "柯莱",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/11/07 15:00:00",
+                    "endtime": "2023/11/28 17:59:59"
+                },
+                "five_rank": "芙宁娜",
+                "four_rank": [
+                    "夏洛蒂",
+                    "柯莱",
+                    "北斗"
+                ],
+                "four_rank_1": "夏洛蒂",
+                "four_rank_2": "柯莱",
+                "four_rank_3": "北斗"
+            },
+            {
+                "time": {
+                    "starttime": "2023/11/07 15:00:00",
+                    "endtime": "2023/11/28 17:59:59"
+                },
+                "five_rank": "白术",
+                "four_rank": [
+                    "夏洛蒂",
+                    "柯莱",
+                    "北斗"
+                ],
+                "four_rank_1": "夏洛蒂",
+                "four_rank_2": "柯莱",
+                "four_rank_3": "北斗"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/28 15:00:00",
+                    "endtime": "2023/03/21 17:59:59"
+                },
+                "five_rank": "迪希雅",
+                "four_rank": [
+                    "班尼特",
+                    "芭芭拉",
+                    "柯莱"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "柯莱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/28 15:00:00",
+                    "endtime": "2023/03/21 17:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "班尼特",
+                    "芭芭拉",
+                    "柯莱"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "柯莱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/23 15:00:00",
+                    "endtime": "2022/09/09 17:59:59"
+                },
+                "five_rank": "提纳里",
+                "four_rank": [
+                    "柯莱",
+                    "迪奥娜",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "柯莱",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/23 15:00:00",
+                    "endtime": "2022/09/09 17:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "柯莱",
+                    "迪奥娜",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "柯莱",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "菲谢尔"
+            }
+        ],
+        "earliest_time": "2022/08/23 15:00:00"
+    },
+    {
+        "name": "烟绯",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/07/25 18:00:00",
+                    "endtime": "2023/08/15 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "珐露珊",
+                    "罗莎莉亚",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2023/07/25 18:00:00",
+                    "endtime": "2023/08/15 14:59:59"
+                },
+                "five_rank": "流浪者",
+                "four_rank": [
+                    "珐露珊",
+                    "罗莎莉亚",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/06 15:00:00",
+                    "endtime": "2022/12/27 17:59:59"
+                },
+                "five_rank": "流浪者",
+                "four_rank": [
+                    "珐露珊",
+                    "五郎",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "五郎",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/06 15:00:00",
+                    "endtime": "2022/12/27 17:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "珐露珊",
+                    "五郎",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "五郎",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/05/31 06:00:00",
+                    "endtime": "2022/06/21 17:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "芭芭拉",
+                    "烟绯",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "烟绯",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/05/31 06:00:00",
+                    "endtime": "2022/06/21 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "芭芭拉",
+                    "烟绯",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "烟绯",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/25 18:00:00",
+                    "endtime": "2022/02/15 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "烟绯"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/25 18:00:00",
+                    "endtime": "2022/02/15 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "烟绯"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/10/12 15:00:00",
+                    "endtime": "2021/11/02 17:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "凝光",
+                    "重云",
+                    "烟绯"
+                ],
+                "four_rank_1": "凝光",
+                "four_rank_2": "重云",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/07/20 15:00:00",
+                    "endtime": "2021/08/10 17:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "凝光",
+                    "重云",
+                    "烟绯"
+                ],
+                "four_rank_1": "凝光",
+                "four_rank_2": "重云",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/04/27 15:00:00",
+                    "endtime": "2021/05/18 17:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "烟绯",
+                    "诺艾尔",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "烟绯",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "迪奥娜"
+            }
+        ],
+        "earliest_time": "2021/04/27 15:00:00"
+    },
+    {
+        "name": "珐露珊",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/07/25 18:00:00",
+                    "endtime": "2023/08/15 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "珐露珊",
+                    "罗莎莉亚",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2023/07/25 18:00:00",
+                    "endtime": "2023/08/15 14:59:59"
+                },
+                "five_rank": "流浪者",
+                "four_rank": [
+                    "珐露珊",
+                    "罗莎莉亚",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/06 15:00:00",
+                    "endtime": "2022/12/27 17:59:59"
+                },
+                "five_rank": "流浪者",
+                "four_rank": [
+                    "珐露珊",
+                    "五郎",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "五郎",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/06 15:00:00",
+                    "endtime": "2022/12/27 17:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "珐露珊",
+                    "五郎",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "五郎",
+                "four_rank_3": "烟绯"
+            }
+        ],
+        "earliest_time": "2022/12/06 15:00:00"
+    },
+    {
+        "name": "班尼特",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/08/15 15:00:00",
+                    "endtime": "2023/09/05 17:59:59"
+                },
+                "five_rank": "林尼",
+                "four_rank": [
+                    "琳妮特",
+                    "班尼特",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "琳妮特",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "芭芭拉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/08/15 15:00:00",
+                    "endtime": "2023/09/05 17:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "琳妮特",
+                    "班尼特",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "琳妮特",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "芭芭拉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/28 15:00:00",
+                    "endtime": "2023/03/21 17:59:59"
+                },
+                "five_rank": "迪希雅",
+                "four_rank": [
+                    "班尼特",
+                    "芭芭拉",
+                    "柯莱"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "柯莱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/28 15:00:00",
+                    "endtime": "2023/03/21 17:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "班尼特",
+                    "芭芭拉",
+                    "柯莱"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "柯莱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/01 15:00:00",
+                    "endtime": "2022/11/18 17:59:59"
+                },
+                "five_rank": "纳西妲",
+                "four_rank": [
+                    "雷泽",
+                    "诺艾尔",
+                    "班尼特"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "班尼特"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/01 15:00:00",
+                    "endtime": "2022/11/18 17:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "雷泽",
+                    "诺艾尔",
+                    "班尼特"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "班尼特"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/02 18:00:00",
+                    "endtime": "2022/08/23 14:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "云堇"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/08 18:00:00",
+                    "endtime": "2022/03/29 14:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/08 18:00:00",
+                    "endtime": "2022/03/29 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/23 15:00:00",
+                    "endtime": "2021/12/14 18:00:00"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "班尼特",
+                    "诺艾尔",
+                    "罗莎莉亚"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "罗莎莉亚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/23 15:00:00",
+                    "endtime": "2021/12/14 18:00:00"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "班尼特",
+                    "诺艾尔",
+                    "罗莎莉亚"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "罗莎莉亚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/06/29 18:00:00",
+                    "endtime": "2021/07/20 14:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "班尼特",
+                    "雷泽"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "雷泽"
+            },
+            {
+                "time": {
+                    "starttime": "2021/02/17 18:00:00",
+                    "endtime": "2021/03/02 15:59:59"
+                },
+                "five_rank": "刻晴",
+                "four_rank": [
+                    "班尼特",
+                    "凝光",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "凝光",
+                "four_rank_3": "芭芭拉"
+            },
+            {
+                "time": {
+                    "starttime": "2020/12/22 15:00:00",
+                    "endtime": "2021/01/12 15:59:59"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "菲谢尔",
+                    "砂糖",
+                    "班尼特"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "班尼特"
+            }
+        ],
+        "earliest_time": "2020/12/22 15:00:00"
+    },
+    {
+        "name": "琳妮特",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/08/15 15:00:00",
+                    "endtime": "2023/09/05 17:59:59"
+                },
+                "five_rank": "林尼",
+                "four_rank": [
+                    "琳妮特",
+                    "班尼特",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "琳妮特",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "芭芭拉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/08/15 15:00:00",
+                    "endtime": "2023/09/05 17:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "琳妮特",
+                    "班尼特",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "琳妮特",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "芭芭拉"
+            }
+        ],
+        "earliest_time": "2023/08/15 15:00:00"
+    },
+    {
+        "name": "瑶瑶",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/06/13 18:00:00",
+                    "endtime": "2023/07/04 14:59:59"
+                },
+                "five_rank": "艾尔海森",
+                "four_rank": [
+                    "瑶瑶",
+                    "鹿野院平藏",
+                    "香菱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "鹿野院平藏",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/06/13 18:00:00",
+                    "endtime": "2023/07/04 14:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "瑶瑶",
+                    "鹿野院平藏",
+                    "香菱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "鹿野院平藏",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/01/17 15:00:00",
+                    "endtime": "2023/02/07 17:59:59"
+                },
+                "five_rank": "艾尔海森",
+                "four_rank": [
+                    "瑶瑶",
+                    "云堇",
+                    "辛焱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "云堇",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/01/17 15:00:00",
+                    "endtime": "2023/02/07 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "瑶瑶",
+                    "云堇",
+                    "辛焱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "云堇",
+                "four_rank_3": "辛焱"
+            }
+        ],
+        "earliest_time": "2023/01/17 15:00:00"
+    },
+    {
+        "name": "砂糖",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/12/19 15:00:00",
+                    "endtime": "2024/01/09 17:59:59"
+                },
+                "five_rank": "娜维娅",
+                "four_rank": [
+                    "砂糖",
+                    "罗莎莉亚",
+                    "坎蒂丝"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "坎蒂丝"
+            },
+            {
+                "time": {
+                    "starttime": "2023/12/19 15:00:00",
+                    "endtime": "2024/01/09 17:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "砂糖",
+                    "罗莎莉亚",
+                    "坎蒂丝"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "坎蒂丝"
+            },
+            {
+                "time": {
+                    "starttime": "2023/03/21 18:00:00",
+                    "endtime": "2023/04/11 14:59:59"
+                },
+                "five_rank": "申鹤",
+                "four_rank": [
+                    "米卡",
+                    "砂糖",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/03/21 18:00:00",
+                    "endtime": "2023/04/11 14:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "米卡",
+                    "砂糖",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/09 18:00:00",
+                    "endtime": "2022/09/27 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "多莉",
+                    "砂糖",
+                    "行秋"
+                ],
+                "four_rank_1": "多莉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "行秋"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/09 18:00:00",
+                    "endtime": "2022/09/27 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "多莉",
+                    "砂糖",
+                    "行秋"
+                ],
+                "four_rank_1": "多莉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "行秋"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/29 15:00:00",
+                    "endtime": "2022/04/19 18:00:00"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "砂糖",
+                    "香菱",
+                    "云堇"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "香菱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/29 15:00:00",
+                    "endtime": "2022/04/19 18:00:00"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "砂糖",
+                    "香菱",
+                    "云堇"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "香菱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2021/08/31 15:00:00",
+                    "endtime": "2021/09/21 17:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "九条裟罗",
+                    "香菱",
+                    "砂糖"
+                ],
+                "four_rank_1": "九条裟罗",
+                "four_rank_2": "香菱",
+                "four_rank_3": "砂糖"
+            },
+            {
+                "time": {
+                    "starttime": "2021/06/08 15:00:00",
+                    "endtime": "2021/06/29 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "芭芭拉",
+                    "砂糖",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2021/03/16 15:00:00",
+                    "endtime": "2021/04/06 15:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "砂糖",
+                    "雷泽",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2020/12/22 15:00:00",
+                    "endtime": "2021/01/12 15:59:59"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "菲谢尔",
+                    "砂糖",
+                    "班尼特"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "班尼特"
+            },
+            {
+                "time": {
+                    "starttime": "2020/10/20 18:00:00",
+                    "endtime": "2020/11/10 14:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "行秋",
+                    "诺艾尔",
+                    "砂糖"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "砂糖"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "米卡",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/07/04 15:00:00",
+                    "endtime": "2023/07/25 17:59:59"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "米卡",
+                    "雷泽",
+                    "托马"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2023/07/04 15:00:00",
+                    "endtime": "2023/07/25 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "米卡",
+                    "雷泽",
+                    "托马"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2023/03/21 18:00:00",
+                    "endtime": "2023/04/11 14:59:59"
+                },
+                "five_rank": "申鹤",
+                "four_rank": [
+                    "米卡",
+                    "砂糖",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/03/21 18:00:00",
+                    "endtime": "2023/04/11 14:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "米卡",
+                    "砂糖",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "迪奥娜"
+            }
+        ],
+        "earliest_time": "2023/03/21 18:00:00"
+    },
+    {
+        "name": "绮良良",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/11/28 18:00:00",
+                    "endtime": "2023/12/19 14:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "香菱",
+                    "久岐忍",
+                    "绮良良"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "绮良良"
+            },
+            {
+                "time": {
+                    "starttime": "2023/11/28 18:00:00",
+                    "endtime": "2023/12/19 14:59:59"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "香菱",
+                    "久岐忍",
+                    "绮良良"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "绮良良"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/23 15:00:00",
+                    "endtime": "2023/06/13 17:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "绮良良",
+                    "云堇",
+                    "重云"
+                ],
+                "four_rank_1": "绮良良",
+                "four_rank_2": "云堇",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/23 15:00:00",
+                    "endtime": "2023/06/13 17:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "绮良良",
+                    "云堇",
+                    "重云"
+                ],
+                "four_rank_1": "绮良良",
+                "four_rank_2": "云堇",
+                "four_rank_3": "重云"
+            }
+        ],
+        "earliest_time": "2023/05/23 15:00:00"
+    },
+    {
+        "name": "罗莎莉亚",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/12/19 15:00:00",
+                    "endtime": "2024/01/09 17:59:59"
+                },
+                "five_rank": "娜维娅",
+                "four_rank": [
+                    "砂糖",
+                    "罗莎莉亚",
+                    "坎蒂丝"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "坎蒂丝"
+            },
+            {
+                "time": {
+                    "starttime": "2023/12/19 15:00:00",
+                    "endtime": "2024/01/09 17:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "砂糖",
+                    "罗莎莉亚",
+                    "坎蒂丝"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "坎蒂丝"
+            },
+            {
+                "time": {
+                    "starttime": "2023/07/25 18:00:00",
+                    "endtime": "2023/08/15 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "珐露珊",
+                    "罗莎莉亚",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2023/07/25 18:00:00",
+                    "endtime": "2023/08/15 14:59:59"
+                },
+                "five_rank": "流浪者",
+                "four_rank": [
+                    "珐露珊",
+                    "罗莎莉亚",
+                    "烟绯"
+                ],
+                "four_rank_1": "珐露珊",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/27 18:00:00",
+                    "endtime": "2023/01/17 14:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "早柚",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "早柚",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/12/27 18:00:00",
+                    "endtime": "2023/01/17 14:59:59"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "早柚",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "早柚",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/04/19 18:00:00",
+                    "endtime": "2022/05/31 05:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "雷泽",
+                    "罗莎莉亚",
+                    "早柚"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/23 15:00:00",
+                    "endtime": "2021/12/14 18:00:00"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "班尼特",
+                    "诺艾尔",
+                    "罗莎莉亚"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "罗莎莉亚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/23 15:00:00",
+                    "endtime": "2021/12/14 18:00:00"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "班尼特",
+                    "诺艾尔",
+                    "罗莎莉亚"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "罗莎莉亚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/09/21 18:00:00",
+                    "endtime": "2021/10/12 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "北斗",
+                    "行秋"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "北斗",
+                "four_rank_3": "行秋"
+            },
+            {
+                "time": {
+                    "starttime": "2021/06/29 18:00:00",
+                    "endtime": "2021/07/20 14:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "班尼特",
+                    "雷泽"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "雷泽"
+            },
+            {
+                "time": {
+                    "starttime": "2021/04/06 18:00:00",
+                    "endtime": "2021/04/27 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "芭芭拉",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "菲谢尔"
+            }
+        ],
+        "earliest_time": "2021/04/06 18:00:00"
+    },
+    {
+        "name": "芭芭拉",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/08/15 15:00:00",
+                    "endtime": "2023/09/05 17:59:59"
+                },
+                "five_rank": "林尼",
+                "four_rank": [
+                    "琳妮特",
+                    "班尼特",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "琳妮特",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "芭芭拉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/08/15 15:00:00",
+                    "endtime": "2023/09/05 17:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "琳妮特",
+                    "班尼特",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "琳妮特",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "芭芭拉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/28 15:00:00",
+                    "endtime": "2023/03/21 17:59:59"
+                },
+                "five_rank": "迪希雅",
+                "four_rank": [
+                    "班尼特",
+                    "芭芭拉",
+                    "柯莱"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "柯莱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/28 15:00:00",
+                    "endtime": "2023/03/21 17:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "班尼特",
+                    "芭芭拉",
+                    "柯莱"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "柯莱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/10/14 18:00:00",
+                    "endtime": "2022/11/01 14:59:59"
+                },
+                "five_rank": "妮露",
+                "four_rank": [
+                    "北斗",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "北斗",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/10/14 18:00:00",
+                    "endtime": "2022/11/01 14:59:59"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "北斗",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "北斗",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/05/31 06:00:00",
+                    "endtime": "2022/06/21 17:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "芭芭拉",
+                    "烟绯",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "烟绯",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/05/31 06:00:00",
+                    "endtime": "2022/06/21 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "芭芭拉",
+                    "烟绯",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "烟绯",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2021/12/14 18:00:00",
+                    "endtime": "2022/01/04 14:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "五郎",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "五郎",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2021/06/08 15:00:00",
+                    "endtime": "2021/06/29 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "芭芭拉",
+                    "砂糖",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2021/04/06 18:00:00",
+                    "endtime": "2021/04/27 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "芭芭拉",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2021/02/17 18:00:00",
+                    "endtime": "2021/03/02 15:59:59"
+                },
+                "five_rank": "刻晴",
+                "four_rank": [
+                    "班尼特",
+                    "凝光",
+                    "芭芭拉"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "凝光",
+                "four_rank_3": "芭芭拉"
+            },
+            {
+                "time": {
+                    "starttime": "2020/09/28 12:00:00",
+                    "endtime": "2020/10/18 17:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "芭芭拉",
+                    "菲谢尔",
+                    "香菱"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "菲谢尔",
+                "four_rank_3": "香菱"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "莱依拉",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/04/11 15:00:00",
+                    "endtime": "2023/05/02 17:59:59"
+                },
+                "five_rank": "纳西妲",
+                "four_rank": [
+                    "久岐忍",
+                    "多莉",
+                    "莱依拉"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "多莉",
+                "four_rank_3": "莱依拉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/04/11 15:00:00",
+                    "endtime": "2023/05/02 17:59:59"
+                },
+                "five_rank": "妮露",
+                "four_rank": [
+                    "久岐忍",
+                    "多莉",
+                    "莱依拉"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "多莉",
+                "four_rank_3": "莱依拉"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/18 18:00:00",
+                    "endtime": "2022/12/06 14:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "莱依拉",
+                    "托马",
+                    "鹿野院平藏"
+                ],
+                "four_rank_1": "莱依拉",
+                "four_rank_2": "托马",
+                "four_rank_3": "鹿野院平藏"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/18 18:00:00",
+                    "endtime": "2022/12/06 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "莱依拉",
+                    "托马",
+                    "鹿野院平藏"
+                ],
+                "four_rank_1": "莱依拉",
+                "four_rank_2": "托马",
+                "four_rank_3": "鹿野院平藏"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "菲米尼",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/09/05 18:00:00",
+                    "endtime": "2023/09/26 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "菲米尼",
+                    "早柚",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "菲米尼",
+                "four_rank_2": "早柚",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2023/09/05 18:00:00",
+                    "endtime": "2023/09/26 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "菲米尼",
+                    "早柚",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "菲米尼",
+                "four_rank_2": "早柚",
+                "four_rank_3": "诺艾尔"
+            }
+        ],
+        "earliest_time": "2023/09/05 18:00:00"
+    },
+    {
+        "name": "菲谢尔",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/09/26 15:00:00",
+                    "endtime": "2023/10/17 17:59:59"
+                },
+                "five_rank": "那维莱特",
+                "four_rank": [
+                    "菲谢尔",
+                    "行秋",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "行秋",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/09/26 15:00:00",
+                    "endtime": "2023/10/17 17:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "菲谢尔",
+                    "行秋",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "行秋",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/02 18:00:00",
+                    "endtime": "2023/05/23 14:59:59"
+                },
+                "five_rank": "白术",
+                "four_rank": [
+                    "卡维",
+                    "坎蒂丝",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "卡维",
+                "four_rank_2": "坎蒂丝",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/02 18:00:00",
+                    "endtime": "2023/05/23 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "卡维",
+                    "坎蒂丝",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "卡维",
+                "four_rank_2": "坎蒂丝",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/23 15:00:00",
+                    "endtime": "2022/09/09 17:59:59"
+                },
+                "five_rank": "提纳里",
+                "four_rank": [
+                    "柯莱",
+                    "迪奥娜",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "柯莱",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/23 15:00:00",
+                    "endtime": "2022/09/09 17:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "柯莱",
+                    "迪奥娜",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "柯莱",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/02/15 15:00:00",
+                    "endtime": "2022/03/08 17:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "托马",
+                    "菲谢尔",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "托马",
+                "four_rank_2": "菲谢尔",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2021/06/08 15:00:00",
+                    "endtime": "2021/06/29 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "芭芭拉",
+                    "砂糖",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2021/04/06 18:00:00",
+                    "endtime": "2021/04/27 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "芭芭拉",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2020/12/22 15:00:00",
+                    "endtime": "2021/01/12 15:59:59"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "菲谢尔",
+                    "砂糖",
+                    "班尼特"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "班尼特"
+            },
+            {
+                "time": {
+                    "starttime": "2020/09/28 12:00:00",
+                    "endtime": "2020/10/18 17:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "芭芭拉",
+                    "菲谢尔",
+                    "香菱"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "菲谢尔",
+                "four_rank_3": "香菱"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "行秋",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/09/26 15:00:00",
+                    "endtime": "2023/10/17 17:59:59"
+                },
+                "five_rank": "那维莱特",
+                "four_rank": [
+                    "菲谢尔",
+                    "行秋",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "行秋",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/09/26 15:00:00",
+                    "endtime": "2023/10/17 17:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "菲谢尔",
+                    "行秋",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "行秋",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/07 18:00:00",
+                    "endtime": "2023/02/28 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            },
+            {
+                "time": {
+                    "starttime": "2023/02/07 18:00:00",
+                    "endtime": "2023/02/28 14:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/09 18:00:00",
+                    "endtime": "2022/09/27 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "多莉",
+                    "砂糖",
+                    "行秋"
+                ],
+                "four_rank_1": "多莉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "行秋"
+            },
+            {
+                "time": {
+                    "starttime": "2022/09/09 18:00:00",
+                    "endtime": "2022/09/27 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "多莉",
+                    "砂糖",
+                    "行秋"
+                ],
+                "four_rank_1": "多莉",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "行秋"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/25 18:00:00",
+                    "endtime": "2022/02/15 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "烟绯"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/25 18:00:00",
+                    "endtime": "2022/02/15 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "行秋",
+                    "北斗",
+                    "烟绯"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "北斗",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/09/21 18:00:00",
+                    "endtime": "2021/10/12 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "北斗",
+                    "行秋"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "北斗",
+                "four_rank_3": "行秋"
+            },
+            {
+                "time": {
+                    "starttime": "2021/05/18 18:00:00",
+                    "endtime": "2021/06/08 14:59:59"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "辛焱",
+                    "行秋",
+                    "北斗"
+                ],
+                "four_rank_1": "辛焱",
+                "four_rank_2": "行秋",
+                "four_rank_3": "北斗"
+            },
+            {
+                "time": {
+                    "starttime": "2021/03/02 18:00:00",
+                    "endtime": "2021/03/16 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "行秋",
+                    "香菱",
+                    "重云"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "香菱",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2021/01/12 18:00:00",
+                    "endtime": "2021/02/02 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "香菱",
+                    "行秋",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "行秋",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2020/10/20 18:00:00",
+                    "endtime": "2020/11/10 14:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "行秋",
+                    "诺艾尔",
+                    "砂糖"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "砂糖"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "诺艾尔",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/09/05 18:00:00",
+                    "endtime": "2023/09/26 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "菲米尼",
+                    "早柚",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "菲米尼",
+                "four_rank_2": "早柚",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2023/09/05 18:00:00",
+                    "endtime": "2023/09/26 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "菲米尼",
+                    "早柚",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "菲米尼",
+                "four_rank_2": "早柚",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/01 15:00:00",
+                    "endtime": "2022/11/18 17:59:59"
+                },
+                "five_rank": "纳西妲",
+                "four_rank": [
+                    "雷泽",
+                    "诺艾尔",
+                    "班尼特"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "班尼特"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/01 15:00:00",
+                    "endtime": "2022/11/18 17:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "雷泽",
+                    "诺艾尔",
+                    "班尼特"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "班尼特"
+            },
+            {
+                "time": {
+                    "starttime": "2022/05/31 06:00:00",
+                    "endtime": "2022/06/21 17:59:59"
+                },
+                "five_rank": "夜兰",
+                "four_rank": [
+                    "芭芭拉",
+                    "烟绯",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "烟绯",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/05/31 06:00:00",
+                    "endtime": "2022/06/21 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "芭芭拉",
+                    "烟绯",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "烟绯",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/23 15:00:00",
+                    "endtime": "2021/12/14 18:00:00"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "班尼特",
+                    "诺艾尔",
+                    "罗莎莉亚"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "罗莎莉亚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/23 15:00:00",
+                    "endtime": "2021/12/14 18:00:00"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "班尼特",
+                    "诺艾尔",
+                    "罗莎莉亚"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "罗莎莉亚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/04/27 15:00:00",
+                    "endtime": "2021/05/18 17:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "烟绯",
+                    "诺艾尔",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "烟绯",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2021/03/16 15:00:00",
+                    "endtime": "2021/04/06 15:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "砂糖",
+                    "雷泽",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2021/01/12 18:00:00",
+                    "endtime": "2021/02/02 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "香菱",
+                    "行秋",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "行秋",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2020/10/20 18:00:00",
+                    "endtime": "2020/11/10 14:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "行秋",
+                    "诺艾尔",
+                    "砂糖"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "砂糖"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "辛焱",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/01/17 15:00:00",
+                    "endtime": "2023/02/07 17:59:59"
+                },
+                "five_rank": "艾尔海森",
+                "four_rank": [
+                    "瑶瑶",
+                    "云堇",
+                    "辛焱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "云堇",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/01/17 15:00:00",
+                    "endtime": "2023/02/07 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "瑶瑶",
+                    "云堇",
+                    "辛焱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "云堇",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/02 18:00:00",
+                    "endtime": "2022/08/23 14:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "云堇"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/08 18:00:00",
+                    "endtime": "2022/03/29 14:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/08 18:00:00",
+                    "endtime": "2022/03/29 14:59:59"
+                },
+                "five_rank": "珊瑚宫心海",
+                "four_rank": [
+                    "班尼特",
+                    "辛焱",
+                    "九条裟罗"
+                ],
+                "four_rank_1": "班尼特",
+                "four_rank_2": "辛焱",
+                "four_rank_3": "九条裟罗"
+            },
+            {
+                "time": {
+                    "starttime": "2021/08/10 18:00:00",
+                    "endtime": "2021/08/31 14:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "早柚",
+                    "迪奥娜",
+                    "辛焱"
+                ],
+                "four_rank_1": "早柚",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2021/05/18 18:00:00",
+                    "endtime": "2021/06/08 14:59:59"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "辛焱",
+                    "行秋",
+                    "北斗"
+                ],
+                "four_rank_1": "辛焱",
+                "four_rank_2": "行秋",
+                "four_rank_3": "北斗"
+            },
+            {
+                "time": {
+                    "starttime": "2021/02/02 15:00:00",
+                    "endtime": "2021/02/17 15:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "迪奥娜",
+                    "北斗",
+                    "辛焱"
+                ],
+                "four_rank_1": "迪奥娜",
+                "four_rank_2": "北斗",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2020/12/01 18:00:00",
+                    "endtime": "2020/12/22 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "辛焱",
+                    "雷泽",
+                    "重云"
+                ],
+                "four_rank_1": "辛焱",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "重云"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "迪奥娜",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/09/26 15:00:00",
+                    "endtime": "2023/10/17 17:59:59"
+                },
+                "five_rank": "那维莱特",
+                "four_rank": [
+                    "菲谢尔",
+                    "行秋",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "行秋",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/09/26 15:00:00",
+                    "endtime": "2023/10/17 17:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "菲谢尔",
+                    "行秋",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "菲谢尔",
+                "four_rank_2": "行秋",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/03/21 18:00:00",
+                    "endtime": "2023/04/11 14:59:59"
+                },
+                "five_rank": "申鹤",
+                "four_rank": [
+                    "米卡",
+                    "砂糖",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2023/03/21 18:00:00",
+                    "endtime": "2023/04/11 14:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "米卡",
+                    "砂糖",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "砂糖",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/23 15:00:00",
+                    "endtime": "2022/09/09 17:59:59"
+                },
+                "five_rank": "提纳里",
+                "four_rank": [
+                    "柯莱",
+                    "迪奥娜",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "柯莱",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/08/23 15:00:00",
+                    "endtime": "2022/09/09 17:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "柯莱",
+                    "迪奥娜",
+                    "菲谢尔"
+                ],
+                "four_rank_1": "柯莱",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "菲谢尔"
+            },
+            {
+                "time": {
+                    "starttime": "2022/02/15 15:00:00",
+                    "endtime": "2022/03/08 17:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "托马",
+                    "菲谢尔",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "托马",
+                "four_rank_2": "菲谢尔",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2021/11/02 18:00:00",
+                    "endtime": "2021/11/23 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "托马",
+                    "迪奥娜",
+                    "早柚"
+                ],
+                "four_rank_1": "托马",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/08/10 18:00:00",
+                    "endtime": "2021/08/31 14:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "早柚",
+                    "迪奥娜",
+                    "辛焱"
+                ],
+                "four_rank_1": "早柚",
+                "four_rank_2": "迪奥娜",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2021/04/27 15:00:00",
+                    "endtime": "2021/05/18 17:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "烟绯",
+                    "诺艾尔",
+                    "迪奥娜"
+                ],
+                "four_rank_1": "烟绯",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "迪奥娜"
+            },
+            {
+                "time": {
+                    "starttime": "2021/02/02 15:00:00",
+                    "endtime": "2021/02/17 15:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "迪奥娜",
+                    "北斗",
+                    "辛焱"
+                ],
+                "four_rank_1": "迪奥娜",
+                "four_rank_2": "北斗",
+                "four_rank_3": "辛焱"
+            },
+            {
+                "time": {
+                    "starttime": "2020/11/10 15:00:00",
+                    "endtime": "2020/12/01 15:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "迪奥娜",
+                    "北斗",
+                    "凝光"
+                ],
+                "four_rank_1": "迪奥娜",
+                "four_rank_2": "北斗",
+                "four_rank_3": "凝光"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "重云",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/10/17 18:00:00",
+                    "endtime": "2023/11/07 14:59:59"
+                },
+                "five_rank": "莱欧斯利",
+                "four_rank": [
+                    "重云",
+                    "托马",
+                    "多莉"
+                ],
+                "four_rank_1": "重云",
+                "four_rank_2": "托马",
+                "four_rank_3": "多莉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/10/17 18:00:00",
+                    "endtime": "2023/11/07 14:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "重云",
+                    "托马",
+                    "多莉"
+                ],
+                "four_rank_1": "重云",
+                "four_rank_2": "托马",
+                "four_rank_3": "多莉"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/23 15:00:00",
+                    "endtime": "2023/06/13 17:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "绮良良",
+                    "云堇",
+                    "重云"
+                ],
+                "four_rank_1": "绮良良",
+                "four_rank_2": "云堇",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2023/05/23 15:00:00",
+                    "endtime": "2023/06/13 17:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "绮良良",
+                    "云堇",
+                    "重云"
+                ],
+                "four_rank_1": "绮良良",
+                "four_rank_2": "云堇",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2022/6/21 18:00:00",
+                    "endtime": "2022/7/12 14:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "久岐忍",
+                    "重云",
+                    "五郎"
+                ],
+                "four_rank_1": "久岐忍",
+                "four_rank_2": "重云",
+                "four_rank_3": "五郎"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/04 15:00:00",
+                    "endtime": "2022/01/25 17:59:59"
+                },
+                "five_rank": "申鹤",
+                "four_rank": [
+                    "云堇",
+                    "凝光",
+                    "重云"
+                ],
+                "four_rank_1": "云堇",
+                "four_rank_2": "凝光",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2022/01/04 15:00:00",
+                    "endtime": "2022/01/25 17:59:59"
+                },
+                "five_rank": "魈",
+                "four_rank": [
+                    "云堇",
+                    "凝光",
+                    "重云"
+                ],
+                "four_rank_1": "云堇",
+                "four_rank_2": "凝光",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2021/10/12 15:00:00",
+                    "endtime": "2021/11/02 17:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "凝光",
+                    "重云",
+                    "烟绯"
+                ],
+                "four_rank_1": "凝光",
+                "four_rank_2": "重云",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/07/20 15:00:00",
+                    "endtime": "2021/08/10 17:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "凝光",
+                    "重云",
+                    "烟绯"
+                ],
+                "four_rank_1": "凝光",
+                "four_rank_2": "重云",
+                "four_rank_3": "烟绯"
+            },
+            {
+                "time": {
+                    "starttime": "2021/03/02 18:00:00",
+                    "endtime": "2021/03/16 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "行秋",
+                    "香菱",
+                    "重云"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "香菱",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2020/12/01 18:00:00",
+                    "endtime": "2020/12/22 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "辛焱",
+                    "雷泽",
+                    "重云"
+                ],
+                "four_rank_1": "辛焱",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "重云"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "雷泽",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/07/04 15:00:00",
+                    "endtime": "2023/07/25 17:59:59"
+                },
+                "five_rank": "优菈",
+                "four_rank": [
+                    "米卡",
+                    "雷泽",
+                    "托马"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2023/07/04 15:00:00",
+                    "endtime": "2023/07/25 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "米卡",
+                    "雷泽",
+                    "托马"
+                ],
+                "four_rank_1": "米卡",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/01 15:00:00",
+                    "endtime": "2022/11/18 17:59:59"
+                },
+                "five_rank": "纳西妲",
+                "four_rank": [
+                    "雷泽",
+                    "诺艾尔",
+                    "班尼特"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "班尼特"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/01 15:00:00",
+                    "endtime": "2022/11/18 17:59:59"
+                },
+                "five_rank": "宵宫",
+                "four_rank": [
+                    "雷泽",
+                    "诺艾尔",
+                    "班尼特"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "诺艾尔",
+                "four_rank_3": "班尼特"
+            },
+            {
+                "time": {
+                    "starttime": "2022/04/19 18:00:00",
+                    "endtime": "2022/05/31 05:59:59"
+                },
+                "five_rank": "神里绫华",
+                "four_rank": [
+                    "雷泽",
+                    "罗莎莉亚",
+                    "早柚"
+                ],
+                "four_rank_1": "雷泽",
+                "four_rank_2": "罗莎莉亚",
+                "four_rank_3": "早柚"
+            },
+            {
+                "time": {
+                    "starttime": "2021/06/29 18:00:00",
+                    "endtime": "2021/07/20 14:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "罗莎莉亚",
+                    "班尼特",
+                    "雷泽"
+                ],
+                "four_rank_1": "罗莎莉亚",
+                "four_rank_2": "班尼特",
+                "four_rank_3": "雷泽"
+            },
+            {
+                "time": {
+                    "starttime": "2021/03/16 15:00:00",
+                    "endtime": "2021/04/06 15:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "砂糖",
+                    "雷泽",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2020/12/01 18:00:00",
+                    "endtime": "2020/12/22 14:59:59"
+                },
+                "five_rank": "钟离",
+                "four_rank": [
+                    "辛焱",
+                    "雷泽",
+                    "重云"
+                ],
+                "four_rank_1": "辛焱",
+                "four_rank_2": "雷泽",
+                "four_rank_3": "重云"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "香菱",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/11/28 18:00:00",
+                    "endtime": "2023/12/19 14:59:59"
+                },
+                "five_rank": "赛诺",
+                "four_rank": [
+                    "香菱",
+                    "久岐忍",
+                    "绮良良"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "绮良良"
+            },
+            {
+                "time": {
+                    "starttime": "2023/11/28 18:00:00",
+                    "endtime": "2023/12/19 14:59:59"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "香菱",
+                    "久岐忍",
+                    "绮良良"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "久岐忍",
+                "four_rank_3": "绮良良"
+            },
+            {
+                "time": {
+                    "starttime": "2023/06/13 18:00:00",
+                    "endtime": "2023/07/04 14:59:59"
+                },
+                "five_rank": "艾尔海森",
+                "four_rank": [
+                    "瑶瑶",
+                    "鹿野院平藏",
+                    "香菱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "鹿野院平藏",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/06/13 18:00:00",
+                    "endtime": "2023/07/04 14:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "瑶瑶",
+                    "鹿野院平藏",
+                    "香菱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "鹿野院平藏",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/10/14 18:00:00",
+                    "endtime": "2022/11/01 14:59:59"
+                },
+                "five_rank": "妮露",
+                "four_rank": [
+                    "北斗",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "北斗",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/10/14 18:00:00",
+                    "endtime": "2022/11/01 14:59:59"
+                },
+                "five_rank": "阿贝多",
+                "four_rank": [
+                    "北斗",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "北斗",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/29 15:00:00",
+                    "endtime": "2022/04/19 18:00:00"
+                },
+                "five_rank": "神里绫人",
+                "four_rank": [
+                    "砂糖",
+                    "香菱",
+                    "云堇"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "香菱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2022/03/29 15:00:00",
+                    "endtime": "2022/04/19 18:00:00"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "砂糖",
+                    "香菱",
+                    "云堇"
+                ],
+                "four_rank_1": "砂糖",
+                "four_rank_2": "香菱",
+                "four_rank_3": "云堇"
+            },
+            {
+                "time": {
+                    "starttime": "2021/12/14 18:00:00",
+                    "endtime": "2022/01/04 14:59:59"
+                },
+                "five_rank": "荒泷一斗",
+                "four_rank": [
+                    "五郎",
+                    "芭芭拉",
+                    "香菱"
+                ],
+                "four_rank_1": "五郎",
+                "four_rank_2": "芭芭拉",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2021/08/31 15:00:00",
+                    "endtime": "2021/09/21 17:59:59"
+                },
+                "five_rank": "雷电将军",
+                "four_rank": [
+                    "九条裟罗",
+                    "香菱",
+                    "砂糖"
+                ],
+                "four_rank_1": "九条裟罗",
+                "four_rank_2": "香菱",
+                "four_rank_3": "砂糖"
+            },
+            {
+                "time": {
+                    "starttime": "2021/03/02 18:00:00",
+                    "endtime": "2021/03/16 14:59:59"
+                },
+                "five_rank": "胡桃",
+                "four_rank": [
+                    "行秋",
+                    "香菱",
+                    "重云"
+                ],
+                "four_rank_1": "行秋",
+                "four_rank_2": "香菱",
+                "four_rank_3": "重云"
+            },
+            {
+                "time": {
+                    "starttime": "2021/01/12 18:00:00",
+                    "endtime": "2021/02/02 14:59:59"
+                },
+                "five_rank": "甘雨",
+                "four_rank": [
+                    "香菱",
+                    "行秋",
+                    "诺艾尔"
+                ],
+                "four_rank_1": "香菱",
+                "four_rank_2": "行秋",
+                "four_rank_3": "诺艾尔"
+            },
+            {
+                "time": {
+                    "starttime": "2020/09/28 12:00:00",
+                    "endtime": "2020/10/18 17:59:59"
+                },
+                "five_rank": "温迪",
+                "four_rank": [
+                    "芭芭拉",
+                    "菲谢尔",
+                    "香菱"
+                ],
+                "four_rank_1": "芭芭拉",
+                "four_rank_2": "菲谢尔",
+                "four_rank_3": "香菱"
+            }
+        ],
+        "earliest_time": "2020/09/15 10:00:00"
+    },
+    {
+        "name": "鹿野院平藏",
+        "data": [
+            {
+                "time": {
+                    "starttime": "2023/06/13 18:00:00",
+                    "endtime": "2023/07/04 14:59:59"
+                },
+                "five_rank": "艾尔海森",
+                "four_rank": [
+                    "瑶瑶",
+                    "鹿野院平藏",
+                    "香菱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "鹿野院平藏",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2023/06/13 18:00:00",
+                    "endtime": "2023/07/04 14:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "瑶瑶",
+                    "鹿野院平藏",
+                    "香菱"
+                ],
+                "four_rank_1": "瑶瑶",
+                "four_rank_2": "鹿野院平藏",
+                "four_rank_3": "香菱"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/18 18:00:00",
+                    "endtime": "2022/12/06 14:59:59"
+                },
+                "five_rank": "八重神子",
+                "four_rank": [
+                    "莱依拉",
+                    "托马",
+                    "鹿野院平藏"
+                ],
+                "four_rank_1": "莱依拉",
+                "four_rank_2": "托马",
+                "four_rank_3": "鹿野院平藏"
+            },
+            {
+                "time": {
+                    "starttime": "2022/11/18 18:00:00",
+                    "endtime": "2022/12/06 14:59:59"
+                },
+                "five_rank": "达达利亚",
+                "four_rank": [
+                    "莱依拉",
+                    "托马",
+                    "鹿野院平藏"
+                ],
+                "four_rank_1": "莱依拉",
+                "four_rank_2": "托马",
+                "four_rank_3": "鹿野院平藏"
+            },
+            {
+                "time": {
+                    "starttime": "2022/07/12 15:00:00",
+                    "endtime": "2022/08/02 17:59:59"
+                },
+                "five_rank": "枫原万叶",
+                "four_rank": [
+                    "鹿野院平藏",
+                    "凝光",
+                    "托马"
+                ],
+                "four_rank_1": "鹿野院平藏",
+                "four_rank_2": "凝光",
+                "four_rank_3": "托马"
+            },
+            {
+                "time": {
+                    "starttime": "2022/07/12 15:00:00",
+                    "endtime": "2022/08/02 17:59:59"
+                },
+                "five_rank": "可莉",
+                "four_rank": [
+                    "鹿野院平藏",
+                    "凝光",
+                    "托马"
+                ],
+                "four_rank_1": "鹿野院平藏",
+                "four_rank_2": "凝光",
+                "four_rank_3": "托马"
+            }
+        ],
+        "earliest_time": "2022/07/12 15:00:00"
+    }
+]
