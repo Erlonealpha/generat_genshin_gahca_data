@@ -368,10 +368,7 @@ def load_tmp_data(path):
                 lst_vall.append({
                     "version": content['name'],
                     "context": lst})
-    return lst
-        
-            
-        
+    return lst_vall
 
 def random_time(start_date, end_date):
     start = datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S')
