@@ -378,5 +378,52 @@ gacha_rank34_lst = fill_data_to_uigf(lst)
 # 4星物品的具体选择包含：常驻(御三家)或up(按照当期的4星up)
 #===============================================================
 
+with open(join_(path_b, 'data_json\\char_data.json'), 'r', encoding='utf-8')as j:
+    char_data = json.load(j)
+
+def random_rank_4(gacha_lst):
+    random_index_lst = random.sample(range(0, len(gacha_lst)), limited_gacha_count_dic['四星'])
+    random_index_char_lst = random.sample(random_index_lst, limited_gacha_count_dic['四星角色'])
+    random_index_weapon_lst = random.sample(random_index_lst, limited_gacha_count_dic['四星武器'])
+    random_index_char_lst.sort()
+    random_index_weapon_lst.sort()
+    
+    for index in random_index_char_lst:
+        gacha_lst[index]['rank_type'] = 4
+        gacha_lst[index]['item_type'] = '角色'
+        gacha_lst[index]['name'] = random_obj_with_timeInteval(gacha_lst[index], char_data)
+    for index in random_index_weapon_lst:
+        gacha_lst[index]['rank_type'] = 4
+        gacha_lst[index]['item_type'] = '武器'
+
+def random_obj_with_timeInteval(gacha, time_interval_dic_lst):
+    target_time = datetime.strptime(gacha['time'], '%Y-%m-%d %H:%M:%S')
+    # 所有符合起始时间的角色
+    random_name_lst = []
+    # up角色
+    probalility_up_lst = []
+    for data_dic in  time_interval_dic_lst:
+        tmp_time = datetime.strptime(data_dic['earliest_time'], '%Y/%m/%d %H:%M:%S')
+        if target_time >= tmp_time:
+            random_name_lst.append(data_dic['name'])
+        for data in data_dic['data']:
+            starttime = datetime.strptime(data['time']['starttime'], '%Y/%m/%d %H:%M:%S')
+            endtime = datetime.strptime(data['time']['endtime'], '%Y/%m/%d %H:%M:%S')
+            if target_time >= starttime and target_time <= endtime:
+                probalility_up_lst += data['four_rank']
+    # 去除重复的角色
+    probalility_up_lst = list(set(probalility_up_lst))
+    for char in probalility_up_lst:
+        try:
+            random_name_lst.remove(char)
+        except:
+            print(f'ERROR: random_obj_with_timeInteval() up角色在匹配角色列表找不到 char: {char}')
+            pass
+    
+    print()
+    
+    
+random_rank_4(gacha_rank34_lst)
+
 print()
 
