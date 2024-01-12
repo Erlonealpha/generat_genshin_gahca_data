@@ -398,6 +398,9 @@ def random_rank_4(gacha_lst):
 
 def random_obj_with_timeInteval(gacha, time_interval_dic_lst):
     target_time = datetime.strptime(gacha['time'], '%Y-%m-%d %H:%M:%S')
+    probalility_dic = {}
+    probalility_dic['permanent'] = []
+    probalility_dic['up'] = []
     # 所有符合起始时间的角色
     random_name_lst = []
     # up角色
@@ -406,6 +409,7 @@ def random_obj_with_timeInteval(gacha, time_interval_dic_lst):
         tmp_time = datetime.strptime(data_dic['earliest_time'], '%Y/%m/%d %H:%M:%S')
         if target_time >= tmp_time:
             random_name_lst.append(data_dic['name'])
+            probalility_dic['permanent'].append({'name': data_dic['name'], 'probalility': PermanentProbalility})
         for data in data_dic['data']:
             starttime = datetime.strptime(data['time']['starttime'], '%Y/%m/%d %H:%M:%S')
             endtime = datetime.strptime(data['time']['endtime'], '%Y/%m/%d %H:%M:%S')
@@ -419,11 +423,20 @@ def random_obj_with_timeInteval(gacha, time_interval_dic_lst):
         except:
             print(f'ERROR: random_obj_with_timeInteval() up角色在匹配角色列表找不到 char: {char}')
             pass
+    for up in probalility_up_lst:
+        probalility_dic['up'].append({'name': up['name'], 'probalility': UPprobalility})
+    fianl_char_name = random_obj_with_probalility(probalility_dic)
+    gacha['name'] = fianl_char_name
     
-    print()
-    
-    
-random_rank_4(gacha_rank34_lst)
 
-print()
+def random_obj_with_probalility(probalility_dic):
+    all_item_lst_withProbalility = probalility_dic['permanent'] + probalility_dic['up']
+    probabilities = [item['probability'] for item in all_item_lst_withProbalility]
+    item_names = [item['name'] for item in all_item_lst_withProbalility]
+    chosen_item = random.choices(item_names, weights=probabilities, k=1)[0]
+    return chosen_item
+
+UPprobalility = 0.6
+PermanentProbalility = 0.12
+random_rank_4(gacha_rank34_lst)
 
