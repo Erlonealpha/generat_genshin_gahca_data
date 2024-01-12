@@ -378,14 +378,36 @@ gacha_rank34_lst = fill_data_to_uigf(lst)
 # 4星物品的具体选择包含：常驻(御三家)或up(按照当期的4星up)
 #===============================================================
 
-with open(join_(path_b, 'data_json\\char_data.json'), 'r', encoding='utf-8')as j:
+with open(join_(path_b, 'data_json\\char_data.json'), 'r', encoding='utf-8')as j,\
+     open(join_(path_b, 'data_json\\weapon_data.json'), 'r', encoding='utf-8')as k:
     char_data = json.load(j)
+    weapon_data = json.load(k)
 
 def random_rank_4(gacha_lst):
-    random_index_lst = random.sample(range(0, len(gacha_lst)), limited_gacha_count_dic['四星'])
-    random_index_char_lst = random.sample(random_index_lst, limited_gacha_count_dic['四星角色'])
-    random_index_weapon_lst = random.sample(random_index_lst, limited_gacha_count_dic['四星武器'])
+    # 初始化随机选择的物品索引列表
+    random_index_set = set()
+
+    # 保证至少每10抽有一个4星物品
+    for _ in range(limited_gacha_count_dic['四星'] // 10):
+        selected_indices = set(random.sample(range(len(gacha_lst)), 10))
+        random_index_set.update(selected_indices)
+    
+    # 如果总数不是10的倍数，需要额外随机一些索引
+    remaining = limited_gacha_count_dic['四星'] % 10
+    if remaining > 0:
+        remaining_indices = set(random.sample(range(len(gacha_lst)), remaining))
+        random_index_set.update(remaining_indices)
+    
+    # 如果集合中的索引数量不够，继续补充
+    while len(random_index_set) < limited_gacha_count_dic['四星']:
+        additional_indices = set(random.sample(range(len(gacha_lst)), 1))
+        random_index_set.update(additional_indices)
+
+    random_index_set = list(random_index_set)
+    random_index_set.sort()
+    random_index_char_lst = random.sample(random_index_set, limited_gacha_count_dic['四星角色'])
     random_index_char_lst.sort()
+    random_index_weapon_lst = random.sample(random_index_set, limited_gacha_count_dic['四星武器'])
     random_index_weapon_lst.sort()
     
     for index in random_index_char_lst:
@@ -395,48 +417,57 @@ def random_rank_4(gacha_lst):
     for index in random_index_weapon_lst:
         gacha_lst[index]['rank_type'] = 4
         gacha_lst[index]['item_type'] = '武器'
+        gacha_lst[index]['name'] = random_obj_with_timeInteval(gacha_lst[index], weapon_data, weapon_bool=True)
 
-def random_obj_with_timeInteval(gacha, time_interval_dic_lst):
+def random_obj_with_timeInteval(gacha, time_interval_dic_lst, weapon_bool=False):
     target_time = datetime.strptime(gacha['time'], '%Y-%m-%d %H:%M:%S')
-    probalility_dic = {}
-    probalility_dic['permanent'] = []
-    probalility_dic['up'] = []
-    # 所有符合起始时间的角色
+    probability_dic = {}
+    probability_dic['permanent'] = []
+    probability_dic['up'] = []
+    # 所有符合起始时间的角色/武器
     random_name_lst = []
-    # up角色
-    probalility_up_lst = []
+    # up角色/武器
+    probability_up_lst = []
     for data_dic in  time_interval_dic_lst:
         tmp_time = datetime.strptime(data_dic['earliest_time'], '%Y/%m/%d %H:%M:%S')
         if target_time >= tmp_time:
             random_name_lst.append(data_dic['name'])
-            probalility_dic['permanent'].append({'name': data_dic['name'], 'probalility': PermanentProbalility})
-        for data in data_dic['data']:
-            starttime = datetime.strptime(data['time']['starttime'], '%Y/%m/%d %H:%M:%S')
-            endtime = datetime.strptime(data['time']['endtime'], '%Y/%m/%d %H:%M:%S')
-            if target_time >= starttime and target_time <= endtime:
-                probalility_up_lst += data['four_rank']
-    # 去除重复的角色
-    probalility_up_lst = list(set(probalility_up_lst))
-    for char in probalility_up_lst:
+            probability_dic['permanent'].append({'name': data_dic['name'], 'probability': Permanentprobability})
+        if data_dic['data']:
+            for data in data_dic['data']:
+                starttime = datetime.strptime(data['time']['starttime'], '%Y/%m/%d %H:%M:%S')
+                endtime = datetime.strptime(data['time']['endtime'], '%Y/%m/%d %H:%M:%S')
+                if target_time >= starttime and target_time <= endtime:
+                    probability_up_lst += data['four_rank']
+    # 御三家
+    if not weapon_bool:
+        for char_ in char_lst:
+            probability_dic['permanent'].append({'name': char_, 'probability': Permanentprobability_})
+    
+    # 去除重复的角色/武器
+    probability_up_lst = list(set(probability_up_lst))
+    for char in probability_up_lst:
         try:
             random_name_lst.remove(char)
         except:
             print(f'ERROR: random_obj_with_timeInteval() up角色在匹配角色列表找不到 char: {char}')
             pass
-    for up in probalility_up_lst:
-        probalility_dic['up'].append({'name': up['name'], 'probalility': UPprobalility})
-    fianl_char_name = random_obj_with_probalility(probalility_dic)
-    gacha['name'] = fianl_char_name
+    for up_name in probability_up_lst:
+        probability_dic['up'].append({'name': up_name, 'probability': UPprobability})
+    fianl_char_name = random_obj_with_probability(probability_dic)
+    return fianl_char_name
     
 
-def random_obj_with_probalility(probalility_dic):
-    all_item_lst_withProbalility = probalility_dic['permanent'] + probalility_dic['up']
-    probabilities = [item['probability'] for item in all_item_lst_withProbalility]
-    item_names = [item['name'] for item in all_item_lst_withProbalility]
+def random_obj_with_probability(probability_dic):
+    all_item_lst_withprobability = probability_dic['permanent'] + probability_dic['up']
+    probabilities = [item['probability'] for item in all_item_lst_withprobability]
+    item_names = [item['name'] for item in all_item_lst_withprobability]
     chosen_item = random.choices(item_names, weights=probabilities, k=1)[0]
     return chosen_item
 
-UPprobalility = 0.6
-PermanentProbalility = 0.12
+char_lst = ['凯亚', '丽萨', '安伯']
+UPprobability = 0.5
+Permanentprobability = 0.25
+Permanentprobability_ = 0.06
 random_rank_4(gacha_rank34_lst)
 
