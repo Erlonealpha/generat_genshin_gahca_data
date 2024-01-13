@@ -10,6 +10,8 @@ import pandas as pd
 from datetime import datetime, timedelta
 import random
 
+from random_4rank import random_4rank, chose_luck
+
 # samplejson: dict = json.load(open('./samplejson.json', encoding='utf-8'))
 
 class TPoolType():
@@ -118,9 +120,7 @@ gacha_info = uigf_json['info']
 gacha_list: List[dict] = uigf_json['list']
 
 df_gacha = pd.DataFrame(gacha_list)
-df_gacha.info()
-# 显示df前5行
-print(df_gacha.head() )
+# df_gacha.info()
 
 # 新建一个dataframe 根据列 'name' 筛选出唯一的数据
 df_gacha_unique = df_gacha.drop_duplicates(subset='name')
@@ -146,15 +146,12 @@ df_gacha_type_lst = []
 for name, group in df_gacha_type_group:
     df_gacha_type_lst.append(group.to_dict('records'))
 
-
 char_type_list = []
 for name, group in df_gacha_char_group:
-    print(name)
     char_type_list.append(group.to_dict('records'))
 
 weapon_type_list = []
 for name, group in df_gacha_weapon_group:
-    print(name)
     weapon_type_list.append(group.to_dict('records'))
 
 
@@ -274,6 +271,10 @@ def nomalize_data(
             time = random_time(v[1][0], v[1][1])
         else:
             time = v[1][0]
+        if k == '已抽未出数':
+            fill_len = v[0]
+        else:
+            fill_len = v[0]-1 if v[0]-1 >= 0 else 0
         new_dic = {
             'gacha_type': gacha_type,
             'time': time,
@@ -282,7 +283,7 @@ def nomalize_data(
             'rank_type': '5',
             'id': None,
             'uigf_gacha_type': uigf_gacha_type,
-            'fill_len': v[0]
+            'fill_len': fill_len
         }
         gacha_lst.append(new_dic)
     return gacha_lst
@@ -326,24 +327,22 @@ def generate_random_times(start_date, end_date, count, min_time='08:30:00', max_
 
 
 def fill_data_to_uigf(lst: List[dict]) -> dict:
-    i = 0
     gacha_lst = []
-    while i < len(lst)-1:
-        dic = lst[i]
+    for i, dic in enumerate(lst):
         if dic['name'] == '起始时间':
             starttime = dic['time'][0]
             starttime_front = starttime
-            i += 1
             continue
         elif dic['name'] == '已抽未出数':
             starttime = starttime_front
             endtime = dic['time'][1]
+            fill_len = dic['fill_len']
         else:
             starttime = starttime_front
             fill_len = dic['fill_len']
             endtime = dic['time']
             starttime_front = endtime
-        random_times = generate_random_times(starttime, endtime, fill_len-1)
+        random_times = generate_random_times(starttime, endtime, fill_len)
         for time in random_times:
             new_dic = {
                 'gacha_type': dic['gacha_type'],
@@ -355,59 +354,26 @@ def fill_data_to_uigf(lst: List[dict]) -> dict:
                 'uigf_gacha_type': dic['uigf_gacha_type'],
             }
             gacha_lst.append(new_dic)
-        i += 1
     return gacha_lst
 
-# 按照时间区间随机每个物品的抽卡时间
-lst = nomalize_data(limited_cur_char_dic, '角色', '302')
-# 填充为uigf格式，等待填充具体类型的数据
-gacha_rank34_lst = fill_data_to_uigf(lst)
 
-#===============================================================
-# *随机物品逻辑部分：
-# 按照数量随机生成4星物品填充，随机的物品按照当期的up概率填充具体物品
-# 3星同理，但只需要全部随机即可
-# 
-# *流程：
-# 1. 随机4星的位置
-# 2. 4星具体物品根据概率填充
-# 3. 随机3星的位置
-# 4. 3星具体物品全局随机填充
-#
-# *一些细节：
-# 4星物品的具体选择包含：常驻(御三家)或up(按照当期的4星up)
-#===============================================================
-
-with open(join_(path_b, 'data_json\\char_data.json'), 'r', encoding='utf-8')as j,\
-     open(join_(path_b, 'data_json\\weapon_data.json'), 'r', encoding='utf-8')as k:
-    char_data = json.load(j)
-    weapon_data = json.load(k)
-
-def random_rank_4(gacha_lst):
-    # 初始化随机选择的物品索引列表
-    random_index_set = set()
-
-    # 保证至少每10抽有一个4星物品
-    for _ in range(limited_gacha_count_dic['四星'] // 10):
-        selected_indices = set(random.sample(range(len(gacha_lst)), 10))
-        random_index_set.update(selected_indices)
-    
-    # 如果总数不是10的倍数，需要额外随机一些索引
-    remaining = limited_gacha_count_dic['四星'] % 10
-    if remaining > 0:
-        remaining_indices = set(random.sample(range(len(gacha_lst)), remaining))
-        random_index_set.update(remaining_indices)
-    
-    # 如果集合中的索引数量不够，继续补充
-    while len(random_index_set) < limited_gacha_count_dic['四星']:
-        additional_indices = set(random.sample(range(len(gacha_lst)), 1))
-        random_index_set.update(additional_indices)
-
-    random_index_set = list(random_index_set)
-    random_index_set.sort()
-    random_index_char_lst = random.sample(random_index_set, limited_gacha_count_dic['四星角色'])
+def random_rank_4(gacha_lst, gacha_count_dic, luck_input=False):
+    #  随机获取4星,根据四星占比获取基础概率
+    if not luck_input:
+        ori_luck = len(gacha_lst)/gacha_count_dic['四星']
+        luck = chose_luck(ori_luck, 100, 2500)
+    else:
+        luck = luck_input
+    # 随机部分, 使用了正向迭代
+    gacha_lst_index = random_4rank(len(gacha_lst), gacha_count_dic['四星'], luck)
+    random_index_lst = []
+    for i, x in enumerate(gacha_lst_index):
+        if x==4 or x==5:
+            random_index_lst.append(i)
+    random_index_lst.sort()
+    random_index_char_lst = random.sample(random_index_lst, gacha_count_dic['四星角色'])
     random_index_char_lst.sort()
-    random_index_weapon_lst = random.sample(random_index_set, limited_gacha_count_dic['四星武器'])
+    random_index_weapon_lst = random.sample(random_index_lst, gacha_count_dic['四星武器'])
     random_index_weapon_lst.sort()
     
     for index in random_index_char_lst:
@@ -417,7 +383,8 @@ def random_rank_4(gacha_lst):
     for index in random_index_weapon_lst:
         gacha_lst[index]['rank_type'] = 4
         gacha_lst[index]['item_type'] = '武器'
-        gacha_lst[index]['name'] = random_obj_with_timeInteval(gacha_lst[index], weapon_data, weapon_bool=True)
+        gacha_lst[index]['name'] = random_obj_with_timeInteval(gacha_lst[index], weapon_data_rank_4, weapon_bool=True)
+    return gacha_lst
 
 def random_obj_with_timeInteval(gacha, time_interval_dic_lst, weapon_bool=False):
     target_time = datetime.strptime(gacha['time'], '%Y-%m-%d %H:%M:%S')
@@ -439,6 +406,9 @@ def random_obj_with_timeInteval(gacha, time_interval_dic_lst, weapon_bool=False)
                 endtime = datetime.strptime(data['time']['endtime'], '%Y/%m/%d %H:%M:%S')
                 if target_time >= starttime and target_time <= endtime:
                     probability_up_lst += data['four_rank']
+                # FIXED 将所有卡池内的角色加入列表
+                if target_time >= tmp_time:
+                    random_name_lst += data['four_rank']
     # 御三家
     if not weapon_bool:
         for char_ in char_lst:
@@ -456,7 +426,6 @@ def random_obj_with_timeInteval(gacha, time_interval_dic_lst, weapon_bool=False)
         probability_dic['up'].append({'name': up_name, 'probability': UPprobability})
     fianl_char_name = random_obj_with_probability(probability_dic)
     return fianl_char_name
-    
 
 def random_obj_with_probability(probability_dic):
     all_item_lst_withprobability = probability_dic['permanent'] + probability_dic['up']
@@ -465,9 +434,101 @@ def random_obj_with_probability(probability_dic):
     chosen_item = random.choices(item_names, weights=probabilities, k=1)[0]
     return chosen_item
 
-char_lst = ['凯亚', '丽萨', '安伯']
-UPprobability = 0.5
-Permanentprobability = 0.25
-Permanentprobability_ = 0.06
-random_rank_4(gacha_rank34_lst)
+def random_rank_3(gacha_lst):
+    for match in gacha_lst:
+        if not match['name']:
+            match['name'] = random.choices(rank_3_lst, k=1)[0]
+            match['rank_type'] = 3
+            match['item_type'] = '武器'
+    return gacha_lst
 
+# start_id = '1600000000000000024'
+# end_id   = '1670342760000470524' # 2022-12-07 00:10:59
+end_id_front  = 67034276
+# end_id_bottom = 4705
+# end_id_  = '1702483560000397824' # 2023-12-14 00:25:42
+def fill_id(gacha_lst):
+    first_time = gacha_lst[0]['time']
+    end_time = gacha_lst[-1]['time']
+    # 这里的前缀不需要全部随机
+    random_id_front_lst = random.sample(range(60000000, end_id_front), int(len(gacha_lst)/4))
+    random_id_front_lst += random_id_front_lst*3
+    random_id_front_lst.sort()
+    if len(random_id_front_lst) != len(gacha_lst):
+        offset = len(gacha_lst) - len(random_id_front_lst)
+        if offset > 0:
+            tmp = [random_id_front_lst[-1]]*offset
+            random_id_front_lst += tmp
+        else:
+            random_id_front_lst = random_id_front_lst[:len(random_id_front_lst)-1+offset]
+
+    random_id_bottom_lst = random.sample(range(0000, 9999), len(gacha_lst))
+    random_id_bottom_lst.sort()
+    for random_id_front, random_id_bottom, gacha in zip(random_id_front_lst, random_id_bottom_lst, gacha_lst):
+        random_id_bottom = fill_num(str(random_id_bottom))
+        random_id = '1' + str(random_id_front) + '0000' + random_id_bottom + '24'
+        gacha['id'] = random_id
+    return gacha_lst
+def fill_num(string):
+    if len(string) == 4:
+        return string
+    else:
+        return fill_num('0' + string)
+
+def fill_full_data(gacha_lst: List[dict], cur_dic: List[dict]):
+    gacha_lst_fill = []
+    index = 0
+    for dic in cur_dic:
+        if dic['name'] != '起始时间' or dic['name'] != '已抽未出数':
+            gacha_lst_fill += gacha_lst[index:index + dic['fill_len']]
+            tmp_dic = dic.copy()
+            tmp_dic.pop('fill_len')
+            tmp_dic['id'] = gacha_lst_fill[-1]['id']
+            gacha_lst_fill.append(tmp_dic)
+            index =+ dic['fill_len']
+    return gacha_lst_fill
+    
+if __name__ == '__main__':
+    
+    char_lst = ['凯亚', '丽萨', '安伯']
+    UPprobability = 0.7
+    Permanentprobability = 0.25
+    Permanentprobability_ = 0.06
+    
+    # 按照时间区间随机每个物品的抽卡时间
+    lst_momalized = nomalize_data(limited_cur_char_dic, '角色', '302')
+    num_tol_ = 0
+    for dic_l in lst_momalized:
+        num_tol_ += dic_l['fill_len']
+    # 填充为uigf格式，等待填充具体类型的数据
+    gacha_rank34_lst = fill_data_to_uigf(lst_momalized)
+
+    #===============================================================
+    # *随机物品逻辑部分：
+    # 按照数量随机生成4星物品填充，随机的物品按照当期的up概率填充具体物品
+    # 3星同理，但只需要全部随机即可
+    # 
+    # *流程：
+    # 1. 随机4星的位置
+    # 2. 4星具体物品根据概率填充
+    # 3. 随机3星的位置
+    # 4. 3星具体物品全局随机填充
+    #
+    # *一些细节：
+    # 4星物品的具体选择包含：常驻(御三家)或up(按照当期的4星up)
+    #===============================================================
+
+    with open(join_(path_b, 'data_json\\char_data.json'), 'r', encoding='utf-8')as j,\
+        open(join_(path_b, 'data_json\\weapon_data.json'), 'r', encoding='utf-8')as k:
+        char_data = json.load(j)
+        weapon_data = json.load(k)
+        weapon_data_rank_4 = [x for x in weapon_data if x['data']]
+        rank_3_lst = [x['name'] for x in weapon_data if not x['data']]
+    
+    
+    gacha_rank34_fill_lst = random_rank_4(gacha_rank34_lst, limited_gacha_count_dic, luck_input=0.050249999999999975)
+    gacha_rank34_fill_lst = random_rank_3(gacha_rank34_fill_lst)
+    gacha_rank34_fill_lst = fill_id(gacha_rank34_fill_lst)
+    
+    gacha_lst_final = fill_full_data(gacha_rank34_fill_lst, lst_momalized)
+    print()

@@ -170,7 +170,7 @@ with open(join_(path_b, 'data_json\\weapon_data_with_version.json'), 'r', encodi
 match_data = [context for context in weapon_data_with_version[0]['context'] if context['rank_type']==3]
 for match_ in match_data:
     weapon_group_dic_lst.append({'name': match_['name'], 
-                                 'data': None, 
+                                 'data': None,
                                  'earliest_time': '2020/09/15 10:00:00',
                                  'rank_type': 3})
 
@@ -179,6 +179,5 @@ with open(join_(path_b, 'data_json\\char_data.json'), 'w', encoding='utf-8') as 
     json.dump(char_group_dic_lst, r, ensure_ascii=False, indent=4)
     json.dump(weapon_group_dic_lst, s, ensure_ascii=False, indent=4)
 
-print()
 
 
