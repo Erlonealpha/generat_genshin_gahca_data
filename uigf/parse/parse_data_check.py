@@ -11,8 +11,8 @@ import pandas as pd
 
 path_b = dirname_(abspath_(__file__))
 
-with open(join_(path_b, 'tmp\\char_data_get.json'), 'r', encoding='utf-8') as f, \
-    open(join_(path_b, 'tmp\\weapon_data_get.json'), 'r', encoding='utf-8') as g:
+with open(join_(path_b, '..\\tmp\\char_data_get.json'), 'r', encoding='utf-8') as f, \
+    open(join_(path_b, '..\\tmp\\weapon_data_get.json'), 'r', encoding='utf-8') as g:
     char_data: List[dict] = json.load(f)
     weapon_data: List[dict] = json.load(g)
 
@@ -165,7 +165,7 @@ for weapon_group_dic in weapon_group_dic_lst:
         weapon_group_dic['earliest_time'] = '2020/09/15 10:00:00'
         weapon_group_dic['rank_type'] = 4
 # 写入三星武器
-with open(join_(path_b, 'data_json\\weapon_data_with_version.json'), 'r', encoding='utf-8') as j:
+with open(join_(path_b, '..\\data_json\\weapon_data_with_version.json'), 'r', encoding='utf-8') as j:
     weapon_data_with_version = json.load(j)
 match_data = [context for context in weapon_data_with_version[0]['context'] if context['rank_type']==3]
 for match_ in match_data:
@@ -174,8 +174,8 @@ for match_ in match_data:
                                  'earliest_time': '2020/09/15 10:00:00',
                                  'rank_type': 3})
 
-with open(join_(path_b, 'data_json\\char_data.json'), 'w', encoding='utf-8') as r, \
-     open(join_(path_b, 'data_json\\weapon_data.json'), 'w', encoding='utf-8') as s:
+with open(join_(path_b, '..\\data_json\\char_data.json'), 'w', encoding='utf-8') as r, \
+     open(join_(path_b, '..\\data_json\\weapon_data.json'), 'w', encoding='utf-8') as s:
     json.dump(char_group_dic_lst, r, ensure_ascii=False, indent=4)
     json.dump(weapon_group_dic_lst, s, ensure_ascii=False, indent=4)
 

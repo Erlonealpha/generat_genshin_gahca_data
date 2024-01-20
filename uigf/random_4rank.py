@@ -56,10 +56,14 @@ def random_4rank(gacha_len: int, g4rank_len: int | None =None, luck_w_c: int=0.0
         return rank4_len
 
 # 选择性强化逼近概率生成
-def chose_luck(ori_luck, stride, count, limit_count=100):
-    luck = 0.051
+def chose_luck(ori_luck, stride, count, limit_count=300):
+    if ori_luck < 7 and ori_luck > 6.5:
+        luck = 0.066
+    elif ori_luck < 6.5 and ori_luck > 6:
+        luck = 0.077
+    else:
+        luck = 0.051
     gacha_num = stride
-    count = 1000
     limit_ = 0
     while limit_ < limit_count:
         try:
@@ -70,14 +74,45 @@ def chose_luck(ori_luck, stride, count, limit_count=100):
             if abs(ori_luck - luck_pred) < 0.01:
                 return luck
             elif ori_luck - luck_pred > 0:
-                luck -= 0.00005
+                luck -= 0.00002
             elif ori_luck - luck_pred < 0:
-                luck += 0.00005
+                luck += 0.00002
         finally:
             limit_ += 1
             if limit_ > 10000:
-                return 0.051
-        
+                return luck
+
+def chose_luck_np(ori_luck, stride, count, limit_count=300):
+    if ori_luck < 7 and ori_luck > 6.5:
+        luck = 0.066
+    elif ori_luck < 6.5 and ori_luck > 6:
+        luck = 0.077
+    else:
+        luck = 0.051
+    
+    gacha_num = stride
+    limit_ = 0
+    offset = 0.00002
+    while limit_ < limit_count:
+        try:
+            num = 0
+            for _ in range(count):
+                num += random_4rank(gacha_num, luck_w_c=luck)
+            luck_pred = gacha_num/(num/count)
+            offset_pred = abs(ori_luck - luck_pred)
+            
+            ratio = offset_pred/0.001
+            
+            if offset_pred < 0.01:
+                return luck
+            elif ori_luck - luck_pred > 0:
+                luck -= offset*ratio
+            elif ori_luck - luck_pred < 0:
+                luck += offset*ratio
+        finally:
+            limit_ += 1
+            if limit_ > 10000:
+                return luck
 
 if __name__ == '__main__':
     # 统计df_gacha中的4星次数
@@ -90,4 +125,6 @@ if __name__ == '__main__':
     
     # luck = chose_luck(ori_luck, stride=100, count = 2500) # 0.049549999999999955
     # luck = chose_luck(ori_luck, stride=100, count = 2500) # 0.04959999999999996
-    gacha_lst = random_4rank(1315, g4rank_len=177, luck_w_c = 0.04959999999999996)
+    # gacha_lst = random_4rank(1315, g4rank_len=177, luck_w_c = 0.04959999999999996)
+
+    chose_luck_np(ori_luck, 360, 250)
