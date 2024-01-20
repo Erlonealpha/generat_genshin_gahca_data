@@ -458,7 +458,7 @@ def random_rank_3(gacha_lst):
 
 # start_id = '1600000000000000024'
 # end_id   = '1670342760000470524' # 2022-12-07 00:10:59
-end_id_front  = 67034276
+
 # end_id_bottom = 4705
 # end_id_  = '1702483560000397824' # 2023-12-14 00:25:42
 def fill_id(gacha_lst):
@@ -512,6 +512,9 @@ def wirte_to_json(gacha_list, name):
         json.dump(gacha_list, f, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
+    start_id_front = 67034276
+    end_id_front  = 67034276 # 结束id前缀
+    
     with open(join_(path_b, 'data_json\\char_data.json'), 'r', encoding='utf-8')as j,\
         open(join_(path_b, 'data_json\\weapon_data.json'), 'r', encoding='utf-8')as k:
         char_data = json.load(j)
