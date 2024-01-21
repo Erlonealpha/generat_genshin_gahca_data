@@ -1,23 +1,20 @@
 import random
 
-def random_4rank(gacha_len: int, g4rank_len: int | None =None, luck_w_c: int=0.051):
-                                        # 4星基础概率(角色和武器)
+def random_4rank(gacha_len: int, g4rank_len: int | None =None, luck_w_c: int=0.051, up_luck:int | None = None):
+                                # ^ 4星基础概率               # ^ 4星up概率         # ^ 概率提升
     luck_c_up = 0.5  # 4星up概率(抽到4星后为up角色的概率)
-    up_luck = luck_w_c
+    up_luck = luck_w_c if not up_luck else up_luck
     gacha_lst = []   # 抽取结果
     # 连续抽取3星数目
     consequent_3rank_count = 0
     
     gacha_num = 0    # 抽取次数
-    while gacha_num < gacha_len:
+    while gacha_num < gacha_len - 2: # 抽卡次数-2
         try:
             if consequent_3rank_count == 9:
                 consequent_3rank_count = 0
                 one_gacha = random.choices([4,5], weights=[luck_c_up, luck_c_up], k=1)
-                if one_gacha[0] == 4: # 4星保底
-                    gacha_lst.append(4) # 未up4星
-                elif one_gacha[0] == 5:
-                    gacha_lst.append(5) # up4星角色
+                gacha_lst.append(one_gacha[0]) # 未up4星
             else:
                 if consequent_3rank_count == 7:
                     luck_w_c = up_luck
@@ -27,15 +24,20 @@ def random_4rank(gacha_len: int, g4rank_len: int | None =None, luck_w_c: int=0.0
                     consequent_3rank_count += 1
                 else:
                     one_gacha = random.choices([4,5], weights=[luck_c_up, luck_c_up], k=1)
-                    if one_gacha[0] == 4:
-                        gacha_lst.append(4)
-                    elif one_gacha[0] == 5:
-                        gacha_lst.append(5)
+                    gacha_lst.append(one_gacha[0])
+
         finally:
             # 计数 复位基础概率
             gacha_num += 1
             if luck_w_c != luck_w_c:
                 luck_w_c = luck_w_c
+                
+    # 保证第一和最后一抽为4星，避免出现合并数据后连接处出现大于10抽未出4星的情况
+    one_gacha = random.choices([4,5], weights=[luck_c_up, luck_c_up], k=1)
+    gacha_lst.insert(0, one_gacha[0])
+    one_gacha = random.choices([4,5], weights=[luck_c_up, luck_c_up], k=1)
+    gacha_lst.append(one_gacha[0])
+    
     rank4_len = len([x for x in gacha_lst if x == 4 or x == 5])
     if g4rank_len:
         if g4rank_len == rank4_len:
@@ -51,7 +53,7 @@ def random_4rank(gacha_len: int, g4rank_len: int | None =None, luck_w_c: int=0.0
                 gacha_lst[i] = 4
             return gacha_lst
         else:
-            return random_4rank(gacha_len=gacha_len, g4rank_len=g4rank_len, luck_w_c=luck_w_c)
+            return random_4rank(gacha_len=gacha_len, g4rank_len=g4rank_len, luck_w_c=luck_w_c-0.001)
     else:
         return rank4_len
 
@@ -99,20 +101,19 @@ def chose_luck_np(ori_luck, stride, count, limit_count=300):
             for _ in range(count):
                 num += random_4rank(gacha_num, luck_w_c=luck)
             luck_pred = gacha_num/(num/count)
-            offset_pred = abs(ori_luck - luck_pred)
+            offset_pred = ori_luck - luck_pred
             
             ratio = offset_pred/0.001
             
-            if offset_pred < 0.01:
+            if abs(offset_pred) < 0.01:
                 return luck
-            elif ori_luck - luck_pred > 0:
+            elif offset_pred > 0:
                 luck -= offset*ratio
-            elif ori_luck - luck_pred < 0:
+            elif offset_pred < 0:
                 luck += offset*ratio
         finally:
             limit_ += 1
-            if limit_ > 10000:
-                return luck
+    return luck
 
 if __name__ == '__main__':
     # 统计df_gacha中的4星次数
@@ -126,5 +127,7 @@ if __name__ == '__main__':
     # luck = chose_luck(ori_luck, stride=100, count = 2500) # 0.049549999999999955
     # luck = chose_luck(ori_luck, stride=100, count = 2500) # 0.04959999999999996
     # gacha_lst = random_4rank(1315, g4rank_len=177, luck_w_c = 0.04959999999999996)
-
+ 
+    random_4rank(1315, g4rank_len=177)
+    
     chose_luck_np(ori_luck, 360, 250)

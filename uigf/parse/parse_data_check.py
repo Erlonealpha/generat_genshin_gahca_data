@@ -15,8 +15,55 @@ with open(join_(path_b, '..\\tmp\\char_data_get.json'), 'r', encoding='utf-8') a
     open(join_(path_b, '..\\tmp\\weapon_data_get.json'), 'r', encoding='utf-8') as g:
     char_data: List[dict] = json.load(f)
     weapon_data: List[dict] = json.load(g)
+    
 
-def nomalize_tmp_data(_data, real = True):
+def convert_datetime(
+        strtime, 
+        days:None | int=None,
+        minute:None | int=None,
+        second:None | int=None,
+        operator:None | str=None,
+        convert:bool = False,
+    ):
+    def nomalize_time(time) -> datetime:
+        if operator == 'add':
+            if days:
+                time += timedelta(days=days)
+            if minute:
+                time += timedelta(minutes=minute)
+            if second:
+                time += timedelta(seconds=second)
+        elif operator == 'sub':
+            if days:
+                time -= timedelta(days=days)
+            if minute:
+                time -= timedelta(minutes=minute)
+            if second:
+                time += timedelta(seconds=second)
+        elif days or minute:
+            assert 'operator is not add or sub'
+        return time
+
+    try:
+        # 分开处理需要提前将%H:%M转换为%H:%M:%M，但又需要保留except能正常捕获%H:%M:%S
+        if convert:
+            date_time = datetime.strptime(strtime, '%Y/%m/%d %H:%M')
+            date_time_tmp = date_time.strftime('%Y/%m/%d %H:%M:%M')
+            date_time_tmp = datetime.strptime(date_time_tmp, '%Y/%m/%d %H:%M:%S')
+            date_time = nomalize_time(date_time_tmp)
+            output = date_time.strftime('%Y/%m/%d %H:%M:%M')
+        else:
+            date_time = datetime.strptime(strtime, '%Y/%m/%d %H:%M')
+            date_time = nomalize_time(date_time)
+            output = date_time.strftime('%Y/%m/%d %H:%M:%M')
+    except ValueError:
+        date_time = datetime.strptime(strtime, '%Y/%m/%d %H:%M:%S')
+        date_time = nomalize_time(date_time)
+        output = date_time.strftime('%Y/%m/%d %H:%M:%S')
+    return output
+
+
+def nomalize_tmp_data(_data: List[dict], real = False):
     # 处理没有具体时间的数据
     for i, data in enumerate(_data):
         if '版本更新后' in data['time']:
@@ -26,94 +73,32 @@ def nomalize_tmp_data(_data, real = True):
             else:
                 start_time = _data[i+1]['time'].split('~')[-1].strip()
             # 不闭合时间(真实时间) 由于虚拟数据可能会生成在非卡池时间内，所以添加一个判断
-            if not real:
-                try:
-                    tmp_end_time = datetime.strptime(endtime, '%Y/%m/%d %H:%M')
-                    endtime = tmp_end_time.strftime('%Y/%m/%d %H:%M:%M')
-                except:
-                    pass
-                try:
-                    tmp_time = datetime.strptime(start_time, '%Y/%m/%d %H:%M')
-                    starttime = (tmp_time + timedelta(days = 0.5) + timedelta(minutes=1)).strftime('%Y/%m/%d %H:%M:%M')
-                except ValueError:
-                    tmp_time = datetime.strptime(start_time, '%Y/%m/%d %H:%M:%S')
-                    starttime = (tmp_time + timedelta(days = 0.5) + timedelta(seconds=1)).strftime('%Y/%m/%d %H:%M:%S')
+            if real:
+                endtime = convert_datetime(endtime)
+                starttime = convert_datetime(start_time, days=0.5, second=1, operator='add', convert=True)
+
             else:
-                # 按照分位补全秒位
-                try:
-                    tmp_end_time = datetime.strptime(endtime, '%Y/%m/%d %H:%M')
-                    endtime = tmp_end_time.strftime('%Y/%m/%d %H:%M:%M')
-                except ValueError:
-                    pass
-                # 起始时间
-                try:
-                    tmp_time = datetime.strptime(start_time, '%Y/%m/%d %H:%M')
-                    starttime = (tmp_time + timedelta(minutes=1)).strftime('%Y/%m/%d %H:%M:%M')
-                except ValueError:
-                    tmp_time = datetime.strptime(start_time, '%Y/%m/%d %H:%M:%S')
-                    starttime = (tmp_time + timedelta(seconds=1)).strftime('%Y/%m/%d %H:%M:%S')
+                endtime = convert_datetime(endtime)
+                starttime = convert_datetime(start_time, second=1, operator='add', convert=True)
+
             data['time'] = {'starttime': starttime,
                             'endtime'  : endtime   }
         # 只需要处理时间
         else:
             start_time = data['time'].split('~')[0].strip()
             endtime = data['time'].split('~')[-1].strip()
-            try:
-                tmp_end_time = datetime.strptime(endtime, '%Y/%m/%d %H:%M')
-                endtime = tmp_end_time.strftime('%Y/%m/%d %H:%M:%M')
-            except:
-                pass
-            try:
-                tmp_time = datetime.strptime(start_time, '%Y/%m/%d %H:%M')
-                starttime = tmp_time.strftime('%Y/%m/%d %H:%M:%M')
-            except ValueError:
-                starttime = start_time
+            endtime = convert_datetime(endtime)
+            starttime = convert_datetime(start_time)
+
             data['time'] = {'starttime': starttime,
                             'endtime'  : endtime   }
+        # 只保留名称
         patr = re.compile(r'\([^)]*\)')
-        if data['five_rank']:
-            if '」「' not in data['five_rank']:
-                tmp_data = data['five_rank'].strip('「」')
-                name = re.sub(patr, '', tmp_data.split('·')[-1])
-                data['five_rank'] = name
-            else:
-                _tmp_str_lst = []
-                _tmp_datas_ = data['five_rank'].split('」「')
-                for _tmp_data_ in _tmp_datas_:
-                    _tmp_data_ = _tmp_data_.strip('「」')
-                    _name_ = re.sub(patr, '', _tmp_data_.split('·')[-1])
-                    _tmp_str_lst.append(_name_)
-                data['five_rank'] = _tmp_str_lst
-                if len(_tmp_str_lst) == 2:
-                    data['five_rank_1'] = _tmp_str_lst[0]
-                    data['five_rank_2'] = _tmp_str_lst[1]
-                else:
-                    print('error None type len rank')
-                    exit(1)
-                
-        if data['four_rank']:
-            tmp_str_lst = []
-            tmp_datas_ = data['four_rank'].split('」「')
-            for tmp_data_ in tmp_datas_:
-                tmp_data_ = tmp_data_.strip('「」')
-                name_ = re.sub(patr, '', tmp_data_.split('·')[-1])
-                tmp_str_lst.append(name_)
-            data['four_rank'] = tmp_str_lst
-            if len(tmp_str_lst) == 3:
-                data['four_rank_1'] = tmp_str_lst[0]
-                data['four_rank_2'] = tmp_str_lst[1]
-                data['four_rank_3'] = tmp_str_lst[2]
-            elif len(tmp_str_lst) == 5:
-                data['four_rank_1'] = tmp_str_lst[0]
-                data['four_rank_2'] = tmp_str_lst[1]
-                data['four_rank_3'] = tmp_str_lst[2]
-                data['four_rank_4'] = tmp_str_lst[3]
-                data['four_rank_5'] = tmp_str_lst[4]
-            else:
-                print('error None type len rank')
-                exit(1)
+        data['five_rank'] = [re.sub(patr, '', name.split('·')[-1]) for name in data['five_rank_list']]
+        data['four_rank'] = [re.sub(patr, '', name.split('·')[-1]) for name in data['four_rank_list']]
     return _data
 
+latest_version = char_data[0].get('version')
 char_data_ = nomalize_tmp_data(char_data)
 weapon_data_ = nomalize_tmp_data(weapon_data)
 
@@ -140,7 +125,10 @@ def group_to_dic_lst(group_: List[dict], dic_b = False):
             time_lst = [dic_['data']['time']['starttime'] for dic_ in group['data']]
             # starttime_lst = [dic.get('starttime') for dic in time_lst]
             earliest_time = min(time_lst)
-            group_dic_lst.append({'name': group['name'], 'data': [data['data'] for data in group['data']], 'earliest_time': earliest_time})
+            group_dic_lst.append({'name': group['name'],
+                                  'latest_version': latest_version,
+                                  'data': [data['data'] for data in group['data']], 
+                                  'earliest_time': earliest_time})
         return group_dic_lst
     else:
         return [{'name': name, 'data': group.to_dict('records')} for name, group in group_]
@@ -157,6 +145,7 @@ char_lst = ['凯亚', '丽萨', '安伯']
 earlier_weapon_lst = ['匣里灭辰','匣里龙吟','弓藏','昭心','流浪乐章','祭礼剑',
                       '祭礼大剑','祭礼弓','祭礼残章','笛剑','绝弦','西风剑',
                       '西风大剑','西风猎弓','西风秘典','西风长枪','钟剑','雨裁']
+
 for char_group_dic in char_group_dic_lst:
     if char_group_dic['name'] in earlier_char_lst:
         char_group_dic['earliest_time'] = '2020/09/15 10:00:00'
@@ -164,6 +153,7 @@ for weapon_group_dic in weapon_group_dic_lst:
     if weapon_group_dic['name'] in earlier_weapon_lst:
         weapon_group_dic['earliest_time'] = '2020/09/15 10:00:00'
         weapon_group_dic['rank_type'] = 4
+        
 # 写入三星武器
 with open(join_(path_b, '..\\data_json\\weapon_data_with_version.json'), 'r', encoding='utf-8') as j:
     weapon_data_with_version = json.load(j)
