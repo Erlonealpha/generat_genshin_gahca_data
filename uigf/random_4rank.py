@@ -1,9 +1,9 @@
 import random
 
-def random_4rank(gacha_len: int, g4rank_len: int | None =None, luck_w_c: int=0.051):
-                                        # 4星基础概率(角色和武器)
+def random_4rank(gacha_len: int, g4rank_len: int | None =None, luck_w_c: int=0.051, up_luck:int | None = None):
+                                # ^ 4星基础概率               # ^ 4星up概率         # ^ 概率提升
     luck_c_up = 0.5  # 4星up概率(抽到4星后为up角色的概率)
-    up_luck = luck_w_c
+    up_luck = luck_w_c if not up_luck else up_luck
     gacha_lst = []   # 抽取结果
     # 连续抽取3星数目
     consequent_3rank_count = 0

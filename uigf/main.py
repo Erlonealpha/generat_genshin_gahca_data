@@ -15,151 +15,53 @@ from random_4rank import random_4rank, chose_luck_np
 
 # samplejson: dict = json.load(open('./samplejson.json', encoding='utf-8'))
 
-class TPoolType():
-    def __init__(self) -> None:
-        self.type = '100' | '200' | '301' | '302' | '400'
-
-class UigfJsonType():
-    class uigfinfo():
-        def __init__(self) -> None:
-            self.uid = None
-            self.lang = None
-            self.export_time = None
-            self.export_timestamp = None
-            self.export_app = None
-            self.export_app_version = None
-            self.uigf_version = None
-    class uigflist():
-        def __init__(self) -> None:
-            self.gacha_type = None
-            self.time = None
-            self.name = None
-            self.item_type = None
-            self.rank_type = None
-            self.id = None
-            self.uigf_gacha_type = None
-
-    def __init__(self) -> None:
-        self.info = self.uigfinfo()
-        self.list = self.uigflist()
-        self.lst_col = []
-        self.lst_data = []
-        self.time_lst = []
-        self.tmpcontex = {
-        'info':
-            {
-            'uid': self.info.uid,
-            'lang': self.info.lang,
-            'export_time': self.info.export_time,
-            'export_timestamp': self.info.export_timestamp,
-            'export_app': self.info.export_app,
-            'export_app_version': self.info.export_app_version,
-            'uigf_version': self.info.uigf_version
-            },
-        'list':
-            {
-            'gacha_type': self.list.gacha_type,
-            'time': self.list.time,
-            'name': self.list.name,
-            'item_type': self.list.item_type,
-            'rank_type': self.list.rank_type,
-            'id': self.list.id,
-            'uigf_gacha_type': self.list.uigf_gacha_type
-            }
-        }
-        self.lst = []
-
-    def parse(self, info, list):
-        try:
-            self.info.uid = info['uid'] if info['uid'] else None
-            self.info.lang = info['lang'] if info['lang'] else None
-            self.info.export_time = info['export_time'] if info['export_time'] else None
-            self.info.export_timestamp = info['export_timestamp'] if info['export_timestamp'] else None
-            self.info.export_app = info['export_app'] if info['export_app'] else None
-            self.info.export_app_version = info['export_app_version'] if info['export_app_version'] else None
-            self.info.uigf_version = info['uigf_version'] if info['uigf_version'] else None
-
-            self.list.gacha_type = list['gacha_type'] if list['gacha_type'] else None
-            self.list.time = list['time'] if list['time'] else None
-            self.list.name = list['name'] if list['name'] else None
-            self.list.item_type = list['item_type'] if list['item_type'] else None
-            self.list.rank_type = list['rank_type'] if list['rank_type'] else None
-            self.list.id = list['id'] if list['id'] else None
-            self.list.uigf_gacha_type = list['uigf_gacha_type'] if list['uigf_gacha_type'] else None
-        except:
-            pass
-        self.lst.append(self.tmpcontex)
-
-        self.parse_to_df_lst()
-    
-    def parse_to_df_lst(self):
-        for key, val in self.tmpcontex['info'].items():
-            self.lst_col.append(key)
-            self.lst_data.append(val)
-        for key_, val_ in self.tmpcontex['list'].items():
-            self.lst_col.append(key_)
-            self.lst_data.append(val_)
-            self.time_lst.append(self.list.time)
-# block_bool = False
-# if block_bool:
-#     for key, val in samplejson.items():
-#         if key == "properties":
-#             info = val['info']["properties"]
-#             list = val['list']["items"]
-#             uigf = UigfJsonType()
-#             uigf.parse(info, list)
-
-    # # 数据统计
-    # df = pd.Series(column= uigf.lst_col, row= uigf.lst_data, index=uigf.time_lst)
-
 path_j = r"F:\Documents\python_script\脚本\genshin_ufgi-fix\uigf_data_fix\uigf\uigf_json\UIGF_1.json"
 path_b = dirname_(abspath_(__file__))
 
-#=================================================================
-# 读取json文件
-with open(join_(path_b, '.\\uigf_json\\UIGF_1.json'), 'r', encoding='utf-8') as f:
-    uigf_json: dict = json.load(f)
-# 数据分析
-gacha_info = uigf_json['info']
-gacha_list: List[dict] = uigf_json['list']
+def load_analyze_data(path):
+    #=================================================================
+    # 读取json文件
+    with open(join_(path_b, path), 'r', encoding='utf-8') as f:
+        uigf_json: dict = json.load(f)
+    # 数据分析
+    gacha_info = uigf_json['info']
+    gacha_list: List[dict] = uigf_json['list']
 
-df_gacha = pd.DataFrame(gacha_list)
-# df_gacha.info()
+    df_gacha = pd.DataFrame(gacha_list)
+    # df_gacha.info()
 
-df_gacha_type_group = df_gacha.groupby('uigf_gacha_type')
-df_gacha_type_lst = []
-for name, group in df_gacha_type_group:
-    df_gacha_type_lst.append(group.to_dict('records'))
+    df_gacha_type_group = df_gacha.groupby('uigf_gacha_type')
+    df_gacha_type_lst = []
+    for name, group in df_gacha_type_group:
+        df_gacha_type_lst.append(group.to_dict('records'))
 
-# 新建一个dataframe 根据列 'name' 筛选出唯一的数据
-df_gacha_unique = df_gacha.drop_duplicates(subset='name')
+    # 新建一个dataframe 根据列 'name' 筛选出唯一的数据
+    df_gacha_unique = df_gacha.drop_duplicates(subset='name')
 
-# 然后根据 item_type进行分组
-df_gacha_unique_group = df_gacha_unique.groupby('item_type')
-# 最后将分组的结果存储为列表[字典,...]
-result_list = []
-for name, group in df_gacha_unique_group:
-    result_list.append(group.to_dict('records'))
-if result_list[0][0]['item_type'] == '武器':
-    weapon_list = result_list[0]
-    char_list = result_list[-1]
+    # 然后根据 item_type进行分组
+    df_gacha_unique_group = df_gacha_unique.groupby('item_type')
+    # 最后将分组的结果存储为列表[字典,...]
+    result_list = []
+    for name, group in df_gacha_unique_group:
+        result_list.append(group.to_dict('records'))
+    if result_list[0][0]['item_type'] == '武器':
+        weapon_list = result_list[0]
+        char_list = result_list[-1]
 
-df_gacha_char = pd.DataFrame(char_list)
-df_gacha_weapon = pd.DataFrame(weapon_list)
+    df_gacha_char = pd.DataFrame(char_list)
+    df_gacha_weapon = pd.DataFrame(weapon_list)
 
-df_gacha_char_group = df_gacha_char.groupby('rank_type')
-df_gacha_weapon_group = df_gacha_weapon.groupby('rank_type')
+    df_gacha_char_group = df_gacha_char.groupby('rank_type')
+    df_gacha_weapon_group = df_gacha_weapon.groupby('rank_type')
 
+    char_type_list = []
+    for name, group in df_gacha_char_group:
+        char_type_list.append(group.to_dict('records'))
 
-
-char_type_list = []
-for name, group in df_gacha_char_group:
-    char_type_list.append(group.to_dict('records'))
-
-weapon_type_list = []
-for name, group in df_gacha_weapon_group:
-    weapon_type_list.append(group.to_dict('records'))
-#=================================================================
+    weapon_type_list = []
+    for name, group in df_gacha_weapon_group:
+        weapon_type_list.append(group.to_dict('records'))
+    #=================================================================
 
 
 #=================================================================
@@ -465,7 +367,7 @@ def fill_id(gacha_lst):
     first_time = gacha_lst[0]['time']
     end_time = gacha_lst[-1]['time']
     # 这里的前缀不需要全部随机
-    random_id_front_lst = random.sample(range(60000000, end_id_front), int(len(gacha_lst)/4))
+    random_id_front_lst = random.sample(range(start_id_front, end_id_front), int(len(gacha_lst)/4))
     random_id_front_lst += random_id_front_lst*3
     random_id_front_lst.sort()
     if len(random_id_front_lst) != len(gacha_lst):
@@ -512,9 +414,8 @@ def wirte_to_json(gacha_list, name):
         json.dump(gacha_list, f, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
-    start_id_front = 67034276
-    end_id_front  = 67034276 # 结束id前缀
-    
+    # 加载角色，武器数据 
+    # 数据需要更新时，运行char_data_get.py获取原始数据，然后运行parse_data_check.py 解析数据并规范化
     with open(join_(path_b, 'data_json\\char_data.json'), 'r', encoding='utf-8')as j,\
         open(join_(path_b, 'data_json\\weapon_data.json'), 'r', encoding='utf-8')as k:
         char_data = json.load(j)
@@ -522,28 +423,35 @@ if __name__ == '__main__':
         weapon_data_rank_4 = [x for x in weapon_data if x['data']]
         rank_3_lst = [x['name'] for x in weapon_data if not x['data']]
     
+    # 御三家
     char_lst = ['凯亚', '丽萨', '安伯']
+    # 概率
     UPprobability = 0.75
     Permanentprobability = 0.25
     Permanentprobability_ = 0.06
+    # 需要手动设置的id区间
+    start_id_front = 60000000 # 起始id前缀
+    end_id_front  = 67034276 # 结束id前缀
     
-    target_pool = permanent_cur_char_dic
-    target_count_dic  = permanent_gacha_count_dic
-    target_gacha_type = '200'
+    target_pool = permanent_cur_char_dic # 目标池
+    target_count_dic  = permanent_gacha_count_dic # 目标池中的物品数量字典
+    target_gacha_type = '200' # 目标池type
     random_gacha = True
+    
     if random_gacha:
         # 按照时间区间随机每个物品的抽卡时间
         lst_momalized = nomalize_data(target_pool, target_gacha_type)
-        num_tol_ = 0
-        for dic_l in lst_momalized:
-            num_tol_ += dic_l['fill_len']
+        # num_tol_ = 0
+        # for dic_l in lst_momalized:
+        #     num_tol_ += dic_l['fill_len']
         # 填充为uigf格式，等待填充具体类型的数据
         gacha_rank34_lst = fill_data_to_uigf(lst_momalized)
         
         # luck_input=0.050249999999999975 # limited char 限定
         # luck_input=0.07950000000000007  # limited weapon 武器限定
         # luck_input=0.04159668117033296  # pp 常驻
-        gacha_rank34_fill_lst = random_rank_4(gacha_rank34_lst, target_count_dic, weapon_pool=False, pp_bool=True, luck_input=0.04159668117033296)
+        pp_bool = True if target_gacha_type == '200' else False
+        gacha_rank34_fill_lst = random_rank_4(gacha_rank34_lst, target_count_dic, weapon_pool=False, pp_bool=pp_bool, luck_input=0.04159668117033296)
         gacha_rank34_fill_lst = random_rank_3(gacha_rank34_fill_lst)
         gacha_rank34_fill_lst = fill_id(gacha_rank34_fill_lst)
         

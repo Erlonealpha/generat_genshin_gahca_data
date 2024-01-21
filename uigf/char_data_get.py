@@ -8,54 +8,56 @@ from bs4 import BeautifulSoup
 url = 'https://wiki.biligame.com/ys/%E7%A5%88%E6%84%BF'
 respone = requests.get(url)
 soup = BeautifulSoup(respone.content, 'html.parser')
-sort_contexts = soup.find_all('table', class_="wikitable")
-sort_contexts_ = soup.find('table', class_="wikitable")
+sort_pos_prayerPools = soup.find("span", id="祈愿池一览")
 tables = soup.find_all('table', class_=lambda x: x and 'wikitable' in x.split())
-sort_tables = tables[4:]
+min_c = 0
+for i, table in enumerate(tables):
+    str_len = len(table.get_text())
+    if str_len > min_c:
+        min_c = str_len
+        index = i
+sort_table = tables[index]
+sort_trs = sort_table.find_all('table', class_='wikitable')
 
+# 去除两边的指定内容(这里为「和」)
+def remove_side_str(string, side_str_L='「', side_str_R='」'):
+    if string[0] == side_str_L:
+        string=string[1:]
+    if string[-1] == side_str_R:
+        string=string[:-1]
+    return string
+        
 char_lst = []
 weapon_lst = []
-for sort_table in sort_tables:
-    weapon_bool = False
-    titles = sort_table.find_all('th')
-    contexts = sort_table.find_all('td')
-    if len(titles)!= len(contexts):
-        start_index_offset = -(len(titles)-len(contexts))
-    else:
-        start_index_offset = 0
-    for i, title in enumerate(titles):
-        title_text = title.get_text()
-        if '时间' in title_text:
-            time_ = i
-        elif '5星角色' in title_text:
-            five_rank_ = i
-        elif '4星角色' in title_text:
-            four_rank_ = i
-        elif '5星武器' in title_text:
-            weapon_bool = True
-            five_rank_ = i
-        elif '4星武器' in title_text:
-            weapon_bool = True
-            four_rank_ = i
-    try:
-        time = contexts[time_+start_index_offset].get_text().strip()
-        five_rank = contexts[five_rank_+start_index_offset].get_text().strip()
-        four_rank = contexts[four_rank_+start_index_offset].get_text().strip()
-    except:
-        print('没有数据')
-        continue
-    if weapon_bool:
-        weapon_lst.append({
-            'time': time,
-            'five_rank': five_rank,
-            'four_rank': four_rank
+for sort_tr in sort_trs:
+    # weapon_bool = False
+    text = sort_tr.get_text()
+    text_lst = [[u for u in y.split('\n') if u] for y in [x for x in text.split('时间') if x] if [z for z in y.split('\n') if z]]
+    
+    for sort_text in text_lst:
+        if sort_text[3] == '5星角色':
+            five_rank_lst = [remove_side_str(sort_text[4])]
+            four_rank_lst = [remove_side_str(x) for x in sort_text[6].split('」「')]
+            char_lst.append({
+            'time': sort_text[0],
+            'version': sort_text[2],
+            'five_rank': sort_text[4],
+            'four_rank': sort_text[6],
+            'five_rank_list': five_rank_lst,
+            'four_rank_list': four_rank_lst,
             })
-    else:
-        char_lst.append({
-            'time': time,
-            'five_rank': five_rank,
-            'four_rank': four_rank
+        else:
+            five_rank_lst = [remove_side_str(x) for x in sort_text[4].split('」「')]
+            four_rank_lst = [remove_side_str(x) for x in sort_text[6].split('」「')]
+            weapon_lst.append({
+            'time': sort_text[0],
+            'version': sort_text[2],
+            'five_rank': sort_text[4],
+            'four_rank': sort_text[6],
+            'five_rank_list': five_rank_lst,
+            'four_rank_list': four_rank_lst,
             })
+
 
 path_b = dirname_(abspath_(__file__))
 
