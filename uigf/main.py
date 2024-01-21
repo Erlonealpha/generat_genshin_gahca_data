@@ -266,10 +266,11 @@ def random_rank_4(
     if not luck_input:
         ori_luck = len(gacha_lst)/gacha_count_dic['四星']
         luck = chose_luck_np(ori_luck, 360, 250)
+        print('调优后的概率: %d' ,luck)
     else:
         luck = luck_input
     # 随机部分, 使用了正向迭代
-    gacha_lst_index = random_4rank(len(gacha_lst), gacha_count_dic['四星'], luck)
+    gacha_lst_index = random_4rank(len(gacha_lst), g4rank_len=gacha_count_dic['四星'], luck_w_c=luck)
     random_index_lst = []
     for i, x in enumerate(gacha_lst_index):
         if x==4 or x==5:
@@ -414,8 +415,10 @@ def wirte_to_json(gacha_list, name):
         json.dump(gacha_list, f, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
-    # 加载角色，武器数据 
-    # 数据需要更新时，运行char_data_get.py获取原始数据，然后运行parse_data_check.py 解析数据并规范化
+    #=============================================================================================
+    # 加载角色，武器数据                                                                          
+    # 数据需要更新时, 运行char_data_get.py获取原始数据, 然后运行parse_data_check.py 解析数据并规范化
+    #=============================================================================================
     with open(join_(path_b, 'data_json\\char_data.json'), 'r', encoding='utf-8')as j,\
         open(join_(path_b, 'data_json\\weapon_data.json'), 'r', encoding='utf-8')as k:
         char_data = json.load(j)
@@ -423,35 +426,42 @@ if __name__ == '__main__':
         weapon_data_rank_4 = [x for x in weapon_data if x['data']]
         rank_3_lst = [x['name'] for x in weapon_data if not x['data']]
     
+    print(f"当前数据更新到了: {char_data[0]['latest_version']}"
+          "\n如果版本不正确请按顺序运行char_data_get.py和parse_data_check.py更新数据")
+    input('按回车键继续')
     # 御三家
     char_lst = ['凯亚', '丽萨', '安伯']
     # 概率
     UPprobability = 0.75
     Permanentprobability = 0.25
     Permanentprobability_ = 0.06
+    
+    #=============================================================================================
+    # 设置项
     # 需要手动设置的id区间
     start_id_front = 60000000 # 起始id前缀
     end_id_front  = 67034276 # 结束id前缀
     
     target_pool = permanent_cur_char_dic # 目标池
     target_count_dic  = permanent_gacha_count_dic # 目标池中的物品数量字典
-    target_gacha_type = '200' # 目标池type
-    random_gacha = True
-    
+    target_gacha_type = '200' # 目标池type  100   200  301或400      302
+    random_gacha = True       #              ^     ^      ^           ^
+                              #           新手池 常驻池 角色限定池 武器限定池
+    #=============================================================================================
     if random_gacha:
         # 按照时间区间随机每个物品的抽卡时间
         lst_momalized = nomalize_data(target_pool, target_gacha_type)
-        # num_tol_ = 0
-        # for dic_l in lst_momalized:
-        #     num_tol_ += dic_l['fill_len']
-        # 填充为uigf格式，等待填充具体类型的数据
         gacha_rank34_lst = fill_data_to_uigf(lst_momalized)
         
         # luck_input=0.050249999999999975 # limited char 限定
         # luck_input=0.07950000000000007  # limited weapon 武器限定
         # luck_input=0.04159668117033296  # pp 常驻
+        
+        # 由于使用到了正向随机生成(也就是正向模拟抽卡逼近正确的抽卡数据), 
+        # 需要先得到一个调优后的概率(原概率为0.051), 没有luck_input输入时会进行概率的计算并打印概率
         pp_bool = True if target_gacha_type == '200' else False
-        gacha_rank34_fill_lst = random_rank_4(gacha_rank34_lst, target_count_dic, weapon_pool=False, pp_bool=pp_bool, luck_input=0.04159668117033296)
+        gacha_rank34_fill_lst = random_rank_4(gacha_rank34_lst, target_count_dic, weapon_pool=False, 
+                                              pp_bool=pp_bool, luck_input=0.04159668117033296)
         gacha_rank34_fill_lst = random_rank_3(gacha_rank34_fill_lst)
         gacha_rank34_fill_lst = fill_id(gacha_rank34_fill_lst)
         
