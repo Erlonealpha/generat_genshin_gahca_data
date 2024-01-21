@@ -150,6 +150,113 @@ permanent_cur_char_dic = [
 ]
 #=================================================================
 
+class SectionContext():
+    def __init__(self):
+        self.section: str = str
+        self.context: List[str] = []
+
+
+def parse_input_data(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    section_lst = []
+    remove_index_lst = []
+    ignore = False
+    for i,line in enumerate(lines):
+        for j,strr in enumerate(line):
+            if strr =='/' and j != (len(line)-1) and line[j+1]=='*':
+                st = i
+                ignore = True
+                continue
+            if strr=='*' and j != (len(line)-1) and line[j+1]=='/':
+                remove_index_lst.append([i, st])
+                ignore = False
+                break
+            if strr == ';':
+                line = line[:j] + '\n'
+                lines[i] = line
+        if line.startswith('[') and line.endswith(']\n') and not ignore:
+            section_lst.append([line.strip('[]\n'), i])
+            continue
+        if line == '\n' and not ignore:
+            remove_index_lst.append([i,i])
+            continue
+    for remove_index in reversed(remove_index_lst):
+        i = remove_index[0]
+        st = remove_index[1]
+        for k in range(i, st-1, -1):
+            lines.pop(k)
+        st-=1
+        for section in section_lst:
+            offset = i-st if i-st!=0 else 1
+            if section[1] > i:
+                section[1] -= offset
+    lines = [x.strip('\n') for x in lines]
+    input_data_lst = []
+    for i,section in enumerate(section_lst):
+        end_index = section_lst[i+1][1]-1 if i+1<len(section_lst) else len(lines)-1
+        input_data = SectionContext()
+        input_data.section = section[0]
+        lines_ = lines[section[1]:end_index+1]
+        lines_.pop(0)
+        input_data.context = lines_
+        input_data_lst.append(input_data)
+
+    return input_data_lst
+
+def InputData_to_gacha_data(input_data_lst: List[SectionContext]):
+    global limited_cur_char_dic
+    global limited_weapon_cur_dic
+    global permanent_cur_char_dic
+    global limited_gacha_count_dic
+    global limited_weapon_gacha_count_dic
+    global permanent_gacha_count_dic
+    def to_dic(count_bool=False):
+        lst = []
+        try:
+            if count_bool:
+                for line in section_context.context:
+                    line_split = [x for x in line.split(',') if x]
+                    if len(line_split) != 2:
+                        raise Exception('Error in context: %s\n存在单个内容长度错误'%section_context.context)
+                    lst.append({line_split[0]: line_split[1]})
+            else:
+                for line in section_context.context:
+                    line_split = [x for x in line.split(',') if x]
+                    if len(line_split) != 4:
+                        raise Exception('Error in context: %s\n存在单个内容长度错误'%section_context.context)
+                    
+                    time = [line_split[2].split("'")[1], line_split[2].split("'")[3]] if len(line_split[2].split("'"))==5 else [line_split[2].strip("[]'")]
+
+                    lst.append(
+                        {'category': line_split[0], 
+                            "data": {
+                                "fill_len": int(line_split[1]),
+                                "time": time,
+                        },
+                        "item_type": line_split[3]
+                    })
+        except:
+            raise Exception('Error in context: %s\n无效的内容'%section_context.context)
+        return lst
+    for section_context in input_data_lst:
+        if section_context.section == 'char_limited_gacha':
+            limited_cur_char_dic = to_dic()
+        elif section_context.section == 'weapon_limited_gacha':
+            limited_weapon_cur_dic = to_dic()
+        elif section_context.section == 'limited_permanent_gacha':
+            permanent_cur_char_dic = to_dic()
+        elif section_context.section == 'char_limited_gacha_count':
+            limited_gacha_count_dic = to_dic(count_bool=True)
+        elif section_context.section == 'weapon_limited_gacha_count':
+            limited_weapon_gacha_count_dic = to_dic(count_bool=True)
+        elif section_context.section == 'limited_permanent_gacha_count':
+            permanent_gacha_count_dic = to_dic(count_bool=True)
+        else:
+            raise Exception('Unknown section: %s'%section_context.section)
+
+
+
 
 def nomalize_data(
         data: List[dict], 
@@ -266,7 +373,7 @@ def random_rank_4(
     if not luck_input:
         ori_luck = len(gacha_lst)/gacha_count_dic['四星']
         luck = chose_luck_np(ori_luck, 360, 250)
-        print('调优后的概率: %d' ,luck)
+        print('调优后的概率: %d'%luck)
     else:
         luck = luck_input
     # 随机部分, 使用了正向迭代
@@ -431,6 +538,11 @@ if __name__ == '__main__':
     input('按回车键继续')
     # 御三家
     char_lst = ['凯亚', '丽萨', '安伯']
+    
+    # 加载输入数据, 加载数据前请按照示例填写数据
+    input_data_lst = parse_input_data(join_(path_b, 'input\\input.txt'))
+    InputData_to_gacha_data(input_data_lst)
+
     # 概率
     UPprobability = 0.75
     Permanentprobability = 0.25
