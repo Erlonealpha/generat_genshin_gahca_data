@@ -1,6 +1,7 @@
 [
     {
         "name": "便携动力锯",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -36,6 +37,7 @@
     },
     {
         "name": "勘探钻机",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -71,6 +73,7 @@
     },
     {
         "name": "匣里灭辰",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -774,6 +777,7 @@
     },
     {
         "name": "匣里龙吟",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -1129,6 +1133,7 @@
     },
     {
         "name": "千岩古剑",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -1280,6 +1285,7 @@
     },
     {
         "name": "千岩长枪",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -1431,6 +1437,7 @@
     },
     {
         "name": "幽夜华尔兹",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -1553,6 +1560,7 @@
     },
     {
         "name": "弓藏",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -1879,6 +1887,7 @@
     },
     {
         "name": "恶王丸",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -2030,6 +2039,7 @@
     },
     {
         "name": "断浪长鳍",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -2181,6 +2191,7 @@
     },
     {
         "name": "昭心",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -2565,6 +2576,7 @@
     },
     {
         "name": "暗巷猎手",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -2745,6 +2757,7 @@
     },
     {
         "name": "暗巷的酒与诗",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -2925,6 +2938,7 @@
     },
     {
         "name": "暗巷闪光",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -3105,6 +3119,7 @@
     },
     {
         "name": "曚云之月",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -3256,6 +3271,7 @@
     },
     {
         "name": "流浪乐章",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -3640,6 +3656,7 @@
     },
     {
         "name": "流浪的晚星",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -3704,6 +3721,7 @@
     },
     {
         "name": "测距规",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -3739,6 +3757,7 @@
     },
     {
         "name": "玛海菈的水色",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -3803,6 +3822,7 @@
     },
     {
         "name": "祭礼剑",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -4158,6 +4178,7 @@
     },
     {
         "name": "祭礼大剑",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -4484,6 +4505,7 @@
     },
     {
         "name": "祭礼弓",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -4781,6 +4803,7 @@
     },
     {
         "name": "祭礼残章",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -5136,6 +5159,7 @@
     },
     {
         "name": "笛剑",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -5520,6 +5544,7 @@
     },
     {
         "name": "绝弦",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -5817,6 +5842,7 @@
     },
     {
         "name": "船坞长剑",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -5852,6 +5878,7 @@
     },
     {
         "name": "西福斯的月光",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -5916,6 +5943,7 @@
     },
     {
         "name": "西风剑",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -6271,6 +6299,7 @@
     },
     {
         "name": "西风大剑",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -6597,6 +6626,7 @@
     },
     {
         "name": "西风猎弓",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -6923,6 +6953,7 @@
     },
     {
         "name": "西风秘典",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -7278,6 +7309,7 @@
     },
     {
         "name": "西风长枪",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -7952,6 +7984,7 @@
     },
     {
         "name": "钟剑",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {
@@ -8307,6 +8340,7 @@
     },
     {
         "name": "雨裁",
+        "latest_version": "4.3下半",
         "data": [
             {
                 "time": {

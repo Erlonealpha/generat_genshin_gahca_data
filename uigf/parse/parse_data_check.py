@@ -98,6 +98,7 @@ def nomalize_tmp_data(_data: List[dict], real = False):
         data['four_rank'] = [re.sub(patr, '', name.split('·')[-1]) for name in data['four_rank_list']]
     return _data
 
+latest_version = char_data[0].get('version')
 char_data_ = nomalize_tmp_data(char_data)
 weapon_data_ = nomalize_tmp_data(weapon_data)
 
@@ -124,7 +125,10 @@ def group_to_dic_lst(group_: List[dict], dic_b = False):
             time_lst = [dic_['data']['time']['starttime'] for dic_ in group['data']]
             # starttime_lst = [dic.get('starttime') for dic in time_lst]
             earliest_time = min(time_lst)
-            group_dic_lst.append({'name': group['name'], 'data': [data['data'] for data in group['data']], 'earliest_time': earliest_time})
+            group_dic_lst.append({'name': group['name'],
+                                  'latest_version': latest_version,
+                                  'data': [data['data'] for data in group['data']], 
+                                  'earliest_time': earliest_time})
         return group_dic_lst
     else:
         return [{'name': name, 'data': group.to_dict('records')} for name, group in group_]
@@ -141,6 +145,7 @@ char_lst = ['凯亚', '丽萨', '安伯']
 earlier_weapon_lst = ['匣里灭辰','匣里龙吟','弓藏','昭心','流浪乐章','祭礼剑',
                       '祭礼大剑','祭礼弓','祭礼残章','笛剑','绝弦','西风剑',
                       '西风大剑','西风猎弓','西风秘典','西风长枪','钟剑','雨裁']
+
 for char_group_dic in char_group_dic_lst:
     if char_group_dic['name'] in earlier_char_lst:
         char_group_dic['earliest_time'] = '2020/09/15 10:00:00'
@@ -148,6 +153,7 @@ for weapon_group_dic in weapon_group_dic_lst:
     if weapon_group_dic['name'] in earlier_weapon_lst:
         weapon_group_dic['earliest_time'] = '2020/09/15 10:00:00'
         weapon_group_dic['rank_type'] = 4
+        
 # 写入三星武器
 with open(join_(path_b, '..\\data_json\\weapon_data_with_version.json'), 'r', encoding='utf-8') as j:
     weapon_data_with_version = json.load(j)

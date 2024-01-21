@@ -34,7 +34,7 @@ def random_4rank(gacha_len: int, g4rank_len: int | None =None, luck_w_c: int=0.0
                 
     # 保证第一和最后一抽为4星，避免出现合并数据后连接处出现大于10抽未出4星的情况
     one_gacha = random.choices([4,5], weights=[luck_c_up, luck_c_up], k=1)
-    gacha_lst.insert(0, one_gacha)
+    gacha_lst.insert(0, one_gacha[0])
     one_gacha = random.choices([4,5], weights=[luck_c_up, luck_c_up], k=1)
     gacha_lst.append(one_gacha[0])
     
