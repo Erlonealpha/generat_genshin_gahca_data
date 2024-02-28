@@ -5,19 +5,32 @@ from os.path import abspath as abspath_
 import requests
 from bs4 import BeautifulSoup
 
+
+def sliceContent(text: str, find: str, tag='/span'):
+    res = text.find(find)
+    resc = text[res:]
+    i = resc.find(tag)
+    rec = resc[i+len(tag)+1:].strip()
+    return resc
+
+
 url = 'https://wiki.biligame.com/ys/%E7%A5%88%E6%84%BF'
+url = 'https://wiki.biligame.com/ys/%E5%BE%80%E6%9C%9F%E7%A5%88%E6%84%BF'
 respone = requests.get(url)
-soup = BeautifulSoup(respone.content, 'html.parser')
-sort_pos_prayerPools = soup.find("span", id="祈愿池一览")
+soup = BeautifulSoup(respone.text, 'html.parser')
+sort_pos_prayerPools = soup.find("span", class_="mw-headline", id="历史活动祈愿一览")
 tables = soup.find_all('table', class_=lambda x: x and 'wikitable' in x.split())
-min_c = 0
-for i, table in enumerate(tables):
-    str_len = len(table.get_text())
-    if str_len > min_c:
-        min_c = str_len
-        index = i
-sort_table = tables[index]
-sort_trs = sort_table.find_all('table', class_='wikitable')
+stables = [tab for tab in tables if tab.attrs.get('style')]
+
+# for i, table in enumerate(tables):
+#     if table.find('span', id='活动祈愿（当前）'): 
+#         print()
+#     str_len = len(table.get_text())
+#     if str_len > min_c:
+#         min_c = str_len
+#         index = i
+# sort_table = tables[index]
+# sort_trs = sort_table.find_all('table', class_='wikitable')
 
 # 去除两边的指定内容(这里为「和」)
 def remove_side_str(string, side_str_L='「', side_str_R='」'):
@@ -29,7 +42,7 @@ def remove_side_str(string, side_str_L='「', side_str_R='」'):
         
 char_lst = []
 weapon_lst = []
-for sort_tr in sort_trs:
+for sort_tr in stables:
     # weapon_bool = False
     text = sort_tr.get_text()
     text_lst = [[u for u in y.split('\n') if u] for y in [x for x in text.split('时间') if x] if [z for z in y.split('\n') if z]]
